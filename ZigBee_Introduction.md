@@ -2,7 +2,7 @@
 Table of Contents
 =================
 
-* [ZigBee介绍](https://github.com/QuLeo/ZigBee/blob/master/ZigBee_Introduction.md#zigbee%E4%BB%8B%E7%BB%8D)
+* [ZigBee介绍](#zigbee%E4%BB%8B%E7%BB%8D)
 * [ZigBee和IEEE 802.15.4 的关系](https://github.com/QuLeo/ZigBee/blob/master/ZigBee_Introduction.md#zigbee%E7%9A%84%E7%89%B9%E7%82%B9)
 * [ZigBee的特点]()
 * [ZigBee无线网络通信信道分析]()
