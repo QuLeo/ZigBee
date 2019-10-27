@@ -1,0 +1,185 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.40194/W32 for 8051         04/Nov/2017  09:08:13 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\Source\CO.c            #
+#    Command line       =  -f C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\77564\Desktop\TENZ #
+#                          ×é²¥+PM25+CO+HCL\Projects\zstack\Samples\SampleApp #
+#                          \Source\CO.c -D BUILD_ALL_DEVICES -D               #
+#                          HOLD_AUTO_START -D LCD_SUPPORTED -D                #
+#                          HAL_UART=FALSE -D ZTOOL_P1 -lC                     #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\DemoEB\List\  #
+#                          -lA C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Pr #
+#                          ojects\zstack\Samples\SampleApp\CC2530DB\DemoEB\Li #
+#                          st\ --diag_suppress Pe001,Pa010 -o                 #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\DemoEB\Obj\   #
+#                          -e --no_code_motion --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I C:\Users\77564\Desktop\TEN #
+#                          Z×é²¥+PM25+CO+HCL\Projects\zstack\Samples\SampleAp #
+#                          p\CC2530DB\ -I C:\Users\77564\Desktop\TENZ×é²¥+PM2 #
+#                          5+CO+HCL\Projects\zstack\Samples\SampleApp\CC2530D #
+#                          B\..\Source\ -I C:\Users\77564\Desktop\TENZ×é²¥+PM #
+#                          25+CO+HCL\Projects\zstack\Samples\SampleApp\CC2530 #
+#                          DB\..\..\..\ZMain\TI2530DB\ -I                     #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\include\ -I                       #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\target\CC2530EB\ -I               #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\include\ -I                       #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\high_level\ -I                    #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\ -I               #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\single_chip\ -I   #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mt\ -I C:\Users\77564\Desktop\TENZ×é² #
+#                          ¥+PM25+CO+HCL\Projects\zstack\Samples\SampleApp\CC #
+#                          2530DB\..\..\..\..\..\Components\osal\include\ -I  #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\saddr\ -I                    #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\sdata\ -I                    #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\nwk\ -I                         #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sapi\ -I                        #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sec\ -I                         #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sys\ -I                         #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\zdo\ -I                         #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\zmac\ -I C:\Users\77564\Desktop\TENZ× #
+#                          é²¥+PM25+CO+HCL\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\zmac\f8w\ -Ohz  #
+#                          --require_prototypes                               #
+#    List file          =  C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\DemoEB\List\C #
+#                          O.lst                                              #
+#    Object file        =  C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\DemoEB\Obj\CO #
+#                          .r51                                               #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projects\zstack\Samples\SampleApp\Source\CO.c
+      1          #include <CO.h>//Ò²¿ÉÒÔÓÃÓÚ²âÁ¿HCLÆøÌåÄ£¿éÊä³öµÄÄ£ÄâÁ¿
+      2          
+      3          float ValreadP0_0()//P0_0×÷Îª²âÁ¿µçÑ¹µÄÒý½Å
+                       ^
+Error[Pa045]: function "ValreadP0_0" has no prototype
+      4          {
+      5            int i;
+      6            uint read_value;
+      7            uint read_sum=0;
+      8            float read_aver;
+      9            float val_aver;
+     10            for(i=0;i<10;i++)
+     11            {
+     12              P0DIR &=~(1<<0);//P0_0ÉèÖÃÎªÊäÈë
+     13              P0SEL |=(1<<0);//P0_0¸´ÓÃÎªÍâÉè¹¦ÄÜ
+     14              ADCCON3=0xb0;//²Î¿¼µçÑ¹ÎªAVDD5Òý½ÅµçÑ¹£¬512³éÈ¡ÂÊ£¬Í¨µÀÎªAIN0
+     15              ADCCON1 |=0x40;//¿ªÊ¼×ª»»
+     16              while(!(ADCCON1 & 0x80));     //µÈ´ý AD ×ª»»Íê³É 
+     17              read_value =  ADCL >> 4;           //ADCL ¼Ä´æÆ÷µÍ 2 Î»ÎÞÐ§£¬ÓÉÓÚËûÖ»ÓÐ12Î»ÓÐÐ§(×î¸ßÎ»ÊÇ·ûºÅÎ»£©£¬ADCL¼Ä´æÆ÷µÍ4Î»ÎÞÐ§¡£ÍøÂçÉÏºÜ¶à´úÂëÕâÀï¶¼ÊÇÓÒÒÆÁ½Î»£¬ÄÇÊÇ²»¶ÔµÄ
+     18              read_value |= (((uint)ADCH) << 4);
+     19              read_sum = read_sum + read_value;
+     20            }
+     21            read_aver = ((float)read_sum)/10;
+     22            val_aver = read_aver*3.3/2048;
+     23            return val_aver;
+     24          }
+     25          
+     26          float ValreadP0_4()//P0_4×÷Îª²âÁ¿µçÑ¹µÄÒý½Å
+                       ^
+Error[Pa045]: function "ValreadP0_4" has no prototype
+     27          {
+     28            int i;
+     29            uint read_value;
+     30            uint read_sum=0;
+     31            float read_aver;
+     32            float val_aver;
+     33            for(i=0;i<10;i++)
+     34            {
+     35              P0DIR &=~(1<<4);//P0_4ÉèÖÃÎªÊäÈë
+     36              P0SEL |=(1<<4);//P0_4¸´ÓÃÎªÍâÉè¹¦ÄÜ
+     37              ADCCON3=0xb4;//²Î¿¼µçÑ¹ÎªAVDD5Òý½ÅµçÑ¹£¬512³éÈ¡ÂÊ£¬Í¨µÀÎªAIN4
+     38              ADCCON1 |=0x40;//¿ªÊ¼×ª»»
+     39              while(!(ADCCON1 & 0x80));     //µÈ´ý AD ×ª»»Íê³É 
+     40              read_value =  ADCL >> 4;           //ADCL ¼Ä´æÆ÷µÍ 2 Î»ÎÞÐ§£¬ÓÉÓÚËûÖ»ÓÐ12Î»ÓÐÐ§(×î¸ßÎ»ÊÇ·ûºÅÎ»£©£¬ADCL¼Ä´æÆ÷µÍ4Î»ÎÞÐ§¡£ÍøÂçÉÏºÜ¶à´úÂëÕâÀï¶¼ÊÇÓÒÒÆÁ½Î»£¬ÄÇÊÇ²»¶ÔµÄ
+     41              read_value |= (((uint)ADCH) << 4);
+     42              read_sum = read_sum + read_value;
+     43            }
+     44            read_aver = ((float)read_sum)/10;
+     45            val_aver = read_aver*3.3/2048;
+     46            return val_aver;
+     47          }
+
+Errors: 2
+Warnings: none

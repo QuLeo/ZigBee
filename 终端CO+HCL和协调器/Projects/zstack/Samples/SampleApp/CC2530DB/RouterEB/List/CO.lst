@@ -1,0 +1,188 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         22/Sep/2017  02:35:52 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\Administrator\Desktop\TENZ组播            #
+#                          改2\Projects\zstack\Samples\SampleApp\Source\CO.c  #
+#    Command line       =  -f "C:\Users\Administrator\Desktop\TENZ组播        #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\Tools\CC2530DB\f8wRouter.cfg" (-DCPU32MHZ    #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DRTR_NWK) -f                   #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\Tools\CC2530DB\f8wConfig.cfg" (-DZIGBEEPRO   #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 "C:\Users\Administrator\Des #
+#                          ktop\TENZ组播 改2\Projects\zstack\Samples\SampleAp #
+#                          p\Source\CO.c" -D ZTOOL_P1 -D MT_TASK -D           #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D                      #
+#                          xLCD_SUPPORTED=DEBUG -D HAL_ADC -D                 #
+#                          Channel_1_For_TGS813 -lC                           #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\Rou #
+#                          terEB\List\" -lA "C:\Users\Administrator\Desktop\T #
+#                          ENZ组播 改2\Projects\zstack\Samples\SampleApp\CC25 #
+#                          30DB\RouterEB\List\" --diag_suppress Pe001,Pa010   #
+#                          -o "C:\Users\Administrator\Desktop\TENZ组播        #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\Rou #
+#                          terEB\Obj\" -e --no_code_motion --debug            #
+#                          --core=plain --dptr=16,1 --data_model=large        #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I "C:\Users\Administrator\De #
+#                          sktop\TENZ组播 改2\Projects\zstack\Samples\SampleA #
+#                          pp\CC2530DB\" -I "C:\Users\Administrator\Desktop\T #
+#                          ENZ组播 改2\Projects\zstack\Samples\SampleApp\CC25 #
+#                          30DB\..\Source\" -I "C:\Users\Administrator\Deskto #
+#                          p\TENZ组播 改2\Projects\zstack\Samples\SampleApp\C #
+#                          C2530DB\..\..\..\ZMain\TI2530DB\" -I               #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\hal\include\" -I            #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\hal\target\CC2530EB\" -I    #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\mac\include\" -I            #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\mac\high_level\" -I         #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\mac\low_level\srf04\" -I    #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\mac\low_level\srf04\single_ #
+#                          chip\" -I "C:\Users\Administrator\Desktop\TENZ组播 #
+#                           改2\Projects\zstack\Samples\SampleApp\CC2530DB\.. #
+#                          \..\..\..\..\Components\mt\" -I                    #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\osal\include\" -I           #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\services\saddr\" -I         #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\services\sdata\" -I         #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\af\" -I               #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\nwk\" -I              #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\sapi\" -I             #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\sec\" -I              #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\sys\" -I              #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\stack\zdo\" -I              #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\zmac\" -I                   #
+#                          "C:\Users\Administrator\Desktop\TENZ组播           #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\..\ #
+#                          ..\..\..\..\Components\zmac\f8w\" -Ohz             #
+#    List file          =  C:\Users\Administrator\Desktop\TENZ组播            #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\Rou #
+#                          terEB\List\CO.lst                                  #
+#    Object file        =  C:\Users\Administrator\Desktop\TENZ组播            #
+#                          改2\Projects\zstack\Samples\SampleApp\CC2530DB\Rou #
+#                          terEB\Obj\CO.r51                                   #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\Administrator\Desktop\TENZ组播 改2\Projects\zstack\Samples\SampleApp\Source\CO.c
+      1          #include <CO.h>//也可以用于测量HCL气体模块输出的模拟量
+      2          /*
+      3          float ValreadP0_0()//P0_0作为测量电压的引脚
+      4          {
+      5            int i;
+      6            uint read_value;
+      7            uint read_sum=0;
+      8            float read_aver;
+      9            float val_aver;
+     10            for(i=0;i<10;i++)
+     11            {
+     12              P0DIR &=~(1<<0);//P0_0设置为输入
+     13              P0SEL |=(1<<0);//P0_0复用为外设功能
+     14              ADCCON3=0xb0;//参考电压为AVDD5引脚电压，512抽取率，通道为AIN0
+     15              ADCCON1 |=0x40;//开始转换
+     16              while(!(ADCCON1 & 0x80));     //等待 AD 转换完成 
+     17              read_value =  ADCL >> 4;           //ADCL 寄存器低 2 位无效，由于他只有12位有效(最高位是符号位），ADCL寄存器低4位无效。网络上很多代码这里都是右移两位，那是不对的
+     18              read_value |= (((uint)ADCH) << 4);
+     19              read_sum = read_sum + read_value;
+     20            }
+     21            read_aver = ((float)read_sum)/10;
+     22            val_aver = read_aver*3.3/2048;
+     23            return val_aver;
+     24          }
+     25          
+     26          float ValreadP0_4()//P0_4作为测量电压的引脚
+     27          {
+     28            int i;
+     29            uint read_value;
+     30            uint read_sum=0;
+     31            float read_aver;
+     32            float val_aver;
+     33            for(i=0;i<10;i++)
+     34            {
+     35              P0DIR &=~(1<<4);//P0_4设置为输入
+     36              P0SEL |=(1<<4);//P0_4复用为外设功能
+     37              ADCCON3=0xb4;//参考电压为AVDD5引脚电压，512抽取率，通道为AIN4
+     38              ADCCON1 |=0x40;//开始转换
+     39              while(!(ADCCON1 & 0x80));     //等待 AD 转换完成 
+     40              read_value =  ADCL >> 4;           //ADCL 寄存器低 2 位无效，由于他只有12位有效(最高位是符号位），ADCL寄存器低4位无效。网络上很多代码这里都是右移两位，那是不对的
+     41              read_value |= (((uint)ADCH) << 4);
+     42              read_sum = read_sum + read_value;
+     43            }
+     44            read_aver = ((float)read_sum)/10;
+     45            val_aver = read_aver*3.3/2048;
+     46            return val_aver;
+     47          }*/
+
+
+ 
+ 
+ 0 bytes of memory
+
+Errors: none
+Warnings: none

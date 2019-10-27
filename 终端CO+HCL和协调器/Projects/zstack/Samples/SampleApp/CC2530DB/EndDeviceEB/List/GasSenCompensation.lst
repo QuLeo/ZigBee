@@ -1,0 +1,1406 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.40194/W32 for 8051         22/Feb/2017  22:42:50 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  D:\机器人实践2\TI ZigBee\ZStack For                #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\Sou #
+#                          rce\GasSenCompensation.c                           #
+#    Command line       =  -f "D:\机器人实践2\TI ZigBee\ZStack For            #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\Tools\CC2530DB\f8wEndev.cfg"        #
+#                          (-DCPU32MHZ -DROOT=__near_func                     #
+#                          -DMAC_CFG_TX_DATA_MAX=3 -DMAC_CFG_TX_MAX=6         #
+#                          -DMAC_CFG_RX_MAX=3) -f "D:\机器人实践2\TI          #
+#                          ZigBee\ZStack For Test（SEA）\For Test\3.6.1       #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\Tools\CC2530DB\f8wConfig.cfg"       #
+#                          (-DZIGBEEPRO -DSECURE=0 -DZG_SECURE_DYNAMIC=0      #
+#                          -DREFLECTOR -DDEFAULT_CHANLIST=0x00000800          #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 "D:\机器人实践2\TI          #
+#                          ZigBee\ZStack For Test（SEA）\For Test\3.6.1       #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\Sou #
+#                          rce\GasSenCompensation.c" -D NWK_AUTO_POLL -D      #
+#                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC  #
+#                          -D xLCD_SUPPORTED=DEBUG -lC "D:\机器人实践2\TI     #
+#                          ZigBee\ZStack For Test（SEA）\For Test\3.6.1       #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\EndDeviceEB\List\" -lA "D:\机器人实践2\TI    #
+#                          ZigBee\ZStack For Test（SEA）\For Test\3.6.1       #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\EndDeviceEB\List\" --diag_suppress           #
+#                          Pe001,Pa010 -o "D:\机器人实践2\TI ZigBee\ZStack    #
+#                          For Test（SEA）\For Test\3.6.1                     #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\EndDeviceEB\Obj\" -e --no_code_motion        #
+#                          --debug --core=plain --dptr=16,1                   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I "D:\机器人实践2\TI ZigBee\ZStack For            #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\" -I "D:\机器人实践2\TI ZigBee\ZStack For    #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\Source\" -I "D:\机器人实践2\TI            #
+#                          ZigBee\ZStack For Test（SEA）\For Test\3.6.1       #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\ZMain\TI2530DB\" -I                 #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\hal\include\" -I   #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\hal\target\CC2530E #
+#                          B\" -I "D:\机器人实践2\TI ZigBee\ZStack For        #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\mac\include\" -I   #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\mac\high_level\"   #
+#                          -I "D:\机器人实践2\TI ZigBee\ZStack For            #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\mac\low_level\srf0 #
+#                          4\" -I "D:\机器人实践2\TI ZigBee\ZStack For        #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\mac\low_level\srf0 #
+#                          4\single_chip\" -I "D:\机器人实践2\TI              #
+#                          ZigBee\ZStack For Test（SEA）\For Test\3.6.1       #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\mt\" -I            #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\osal\include\" -I  #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\services\saddr\"   #
+#                          -I "D:\机器人实践2\TI ZigBee\ZStack For            #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\services\sdata\"   #
+#                          -I "D:\机器人实践2\TI ZigBee\ZStack For            #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\stack\af\" -I      #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\stack\nwk\" -I     #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\stack\sapi\" -I    #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\stack\sec\" -I     #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\stack\sys\" -I     #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\stack\zdo\" -I     #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\zmac\" -I          #
+#                          "D:\机器人实践2\TI ZigBee\ZStack For               #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\..\..\..\..\..\Components\zmac\f8w\" -Ohz    #
+#                          --require_prototypes                               #
+#    List file          =  D:\机器人实践2\TI ZigBee\ZStack For                #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\EndDeviceEB\List\GasSenCompensation.lst      #
+#    Object file        =  D:\机器人实践2\TI ZigBee\ZStack For                #
+#                          Test（SEA）\For Test\3.6.1                         #
+#                          按键流程分析\Projects\zstack\Samples\SampleApp\CC2 #
+#                          530DB\EndDeviceEB\Obj\GasSenCompensation.r51       #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+D:\机器人实践2\TI ZigBee\ZStack For Test（SEA）\For Test\3.6.1 按键流程分析\Projects\zstack\Samples\SampleApp\Source\GasSenCompensation.c
+      1          /**************************************
+      2          * 网孔法 区间直线法
+      3          * 获取TGS系列传感器的数据
+      4          **************************************/
+      5          #include "GasSenCompensation.h"
+      6          
+      7          //记录figure2中温湿度数据
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+      8          int GasSen_T[]={-10,0,10,20,30,40};
+   \                     GasSen_T:
+   \   000000                DS 12
+   \   00000C                REQUIRE `?<Initializer for GasSen_T>`
+   \   00000C                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+      9          char GasSen_R[]={0,20,40,65,100};
+   \                     GasSen_R:
+   \   000000                DS 5
+   \   000005                REQUIRE `?<Initializer for GasSen_R>`
+   \   000005                REQUIRE __INIT_XDATA_I
+
+   \                                 In  segment XDATA_Z, align 1, keep-with-next
+     10          char GasSen_Flag=0;
+   \                     GasSen_Flag:
+   \   000000                DS 1
+   \   000001                REQUIRE __INIT_XDATA_Z
+     11          //Methane 甲烷在figure1中的交点坐标
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     12          float Fig1Data_Methane[][2]=
+   \                     Fig1Data_Methane:
+   \   000000                DS 152
+   \   000098                REQUIRE `?<Initializer for Fig1Data_Methane>`
+   \   000098                REQUIRE __INIT_XDATA_I
+     13          {
+     14          	{500,1.5f},
+     15          	{600,1.4f},
+     16          	{700,1.3f},
+     17          	{800,1.2f},
+     18          	{900,1.1f},
+     19          	{1000,1.0f},
+     20          	{1300,0.9f},
+     21          	{1700,0.8f},
+     22          	{2000,0.73f},
+     23          	{2100,0.7f},
+     24          	{3000,0.6f},
+     25          	{4000,0.53f},
+     26          	{4400,0.5f},
+     27          	{5000,0.47f},
+     28          	{6000,0.43f},
+     29          	{7000,0.41f},
+     30          	{8000,0.38f},
+     31          	{9000,0.36f},
+     32          	{10000,0.35f},
+     33          };
+     34          
+
+   \                                 In  segment XDATA_I, align 1, keep-with-next
+     35          float Fig2_Data[GasSen_R_Leghth][GasSen_T_Leghth][2]=
+   \                     Fig2_Data:
+   \   000000                DS 240
+   \   0000F0                REQUIRE `?<Initializer for Fig2_Data>`
+   \   0000F0                REQUIRE __INIT_XDATA_I
+     36          {
+     37          	//0% RH
+     38          	{
+     39          		{-10,1.87f},{0,1.79f},{10,1.74f},{20,1.68f},{30,1.65f},{40,1.61f},
+     40          	},
+     41          	//20% RH
+     42          	{
+     43          		{-10,1.73f},{0,1.52f},{10,1.35f},{20,1.21f},{30,1.12f},{40,1.07f},
+     44          	},
+     45          	//40% RH
+     46          	{
+     47          		{-10,1.68f},{0,1.45f},{10,1.25f},{20,1.1f},{30,0.98f},{40,0.92f},
+     48          	},
+     49          	//65% RH
+     50          	{
+     51          		{-10,1.61f},{0,1.35f},{10,1.15f},{20,1.0f},{30,0.9f},{40,0.86f},
+     52          	},
+     53          	//100% RH
+     54          	{
+     55          		{-10,1.55f},{0,1.3f},{10,1.1f},{20,0.96f},{30,0.86f},{40,0.83f},
+     56          	},
+     57          };
+     58          //参数：RL电阻上的电压值 DHT11温湿度
+     59          //返还：浓度值，500-10000ppm之间
+     60          //注意：TGS813只能测量500-10000ppm浓度的甲烷
+     61          //	当浓度高于10000ppmm,GasSen_Flag的位0被置1;
+     62          //	当浓度低于500ppm,GasSen_Flag的位1被置1;
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     63          float GasSenConcentration(float RL_Vol,char DHT11_T,unsigned char DHT11_R)
+   \                     GasSenConcentration:
+     64          {
+   \   000000   74E8         MOV     A,#-0x18
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 24
+   \   000005                ; Auto size: 9
+   \   000005   74F7         MOV     A,#-0x9
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   E9           MOV     A,R1
+   \   00000B   85..82       MOV     DPL,?XSP + 0
+   \   00000E   85..83       MOV     DPH,?XSP + 1
+   \   000011   F0           MOVX    @DPTR,A
+   \   000012   8A..         MOV     ?V0 + 4,R2
+   \   000014   8B..         MOV     ?V0 + 5,R3
+   \   000016   8C..         MOV     ?V0 + 6,R4
+   \   000018   8D..         MOV     ?V0 + 7,R5
+   \   00001A   7421         MOV     A,#0x21
+   \   00001C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00001F   E0           MOVX    A,@DPTR
+   \   000020   FA           MOV     R2,A
+     65          	float Rs=0;				
+     66          	float RsR0_Ratio1=0;							//Rs与R0的比率1,比率1用于最终计算浓度结果
+     67          	float concentration=0;							//最后的浓度值
+     68          	char i=0;                                                               //循环用到
+     69                  GasSen_Flag = 0;                                                        //清空标志位
+   \   000021   90....       MOV     DPTR,#GasSen_Flag
+   \   000024   E4           CLR     A
+   \   000025   F0           MOVX    @DPTR,A
+     70          
+     71          	Rs = ((GasSen_Vc/RL_Vol)-1)*GasSen_RL;				        //得出Rs的值
+     72          	RsR0_Ratio1 = Rs / GetCookedRo(DHT11_T,DHT11_R);		        //得到比率1,比率1是通过Rs与补偿后的R0的比值获得的。
+   \   000026   F5..         MOV     ?V0 + 0,A
+   \   000028   F5..         MOV     ?V0 + 1,A
+   \   00002A   75..A0       MOV     ?V0 + 2,#-0x60
+   \   00002D   75..40       MOV     ?V0 + 3,#0x40
+   \   000030   78..         MOV     R0,#?V0 + 0
+   \   000032   79..         MOV     R1,#?V0 + 4
+   \   000034   12....       LCALL   ?FLT_DIV
+   \   000037   90....       MOV     DPTR,#__Constant_bf800000
+   \   00003A   78..         MOV     R0,#?V0 + 4
+   \   00003C   12....       LCALL   ?L_MOV_X
+   \   00003F   78..         MOV     R0,#?V0 + 0
+   \   000041   79..         MOV     R1,#?V0 + 4
+   \   000043   12....       LCALL   ?FLT_ADD
+   \   000046                ; Setup parameters for call to function GetCookedRo
+   \   000046   85..82       MOV     DPL,?XSP + 0
+   \   000049   85..83       MOV     DPH,?XSP + 1
+   \   00004C   E0           MOVX    A,@DPTR
+   \   00004D   F9           MOV     R1,A
+   \   00004E   12....       LCALL   ??GetCookedRo?relay
+   \   000051   8A..         MOV     ?V0 + 4,R2
+   \   000053   8B..         MOV     ?V0 + 5,R3
+   \   000055   8C..         MOV     ?V0 + 6,R4
+   \   000057   8D..         MOV     ?V0 + 7,R5
+   \   000059   78..         MOV     R0,#?V0 + 0
+   \   00005B   79..         MOV     R1,#?V0 + 4
+   \   00005D   12....       LCALL   ?FLT_DIV
+     73          
+     74          //	printf("Rs:%f\n",Rs);							//输出Rs
+     75          //	printf("Ratio:%f\n",RsR0_Ratio1);					//输出比率
+     76          //	RsR0_Ratio1 = 1.38;						        //软件设定比率，为了测试
+     77          
+     78          	//判断比率，要求比率对应的浓度值在传感器测量的范围里，若不在，置位标志位
+     79          	if(RsR0_Ratio1 > Fig1Data_Methane[0][1])
+   \   000060   90....       MOV     DPTR,#Fig1Data_Methane + 4
+   \   000063   78..         MOV     R0,#?V0 + 4
+   \   000065   12....       LCALL   ?L_MOV_X
+   \   000068   78..         MOV     R0,#?V0 + 4
+   \   00006A   79..         MOV     R1,#?V0 + 0
+   \   00006C   12....       LCALL   ?FLT_LT
+   \   00006F   5012         JNC     ??GasSenConcentration_0
+     80          	{
+     81          		//目标气体在0-500ppm之间，不在测试范围返还0
+     82          		GasSen_Flag |= (1<<0);
+   \   000071   90....       MOV     DPTR,#GasSen_Flag
+   \   000074   E0           MOVX    A,@DPTR
+   \   000075   D2E0         SETB    0xE0 /* A   */.0
+   \   000077   F0           MOVX    @DPTR,A
+     83          		return 0;
+   \   000078   7A00         MOV     R2,#0x0
+   \   00007A   7B00         MOV     R3,#0x0
+   \   00007C   7C00         MOV     R4,#0x0
+   \   00007E   7D00         MOV     R5,#0x0
+   \   000080   02....       LJMP    ??GasSenConcentration_1 & 0xFFFF
+     84          	}
+     85          	else if(RsR0_Ratio1 < Fig1Data_Methane[NumOfFig1Coor-1][1])
+   \                     ??GasSenConcentration_0:
+   \   000083   90....       MOV     DPTR,#Fig1Data_Methane + 148
+   \   000086   78..         MOV     R0,#?V0 + 4
+   \   000088   12....       LCALL   ?L_MOV_X
+   \   00008B   78..         MOV     R0,#?V0 + 0
+   \   00008D   79..         MOV     R1,#?V0 + 4
+   \   00008F   12....       LCALL   ?FLT_LT
+   \   000092   5012         JNC     ??GasSenConcentration_2
+     86          	{
+     87          		//目标气体浓度大于10000ppm，不在测试范围，返还10000
+     88          		GasSen_Flag |= (1<<1);
+   \   000094   90....       MOV     DPTR,#GasSen_Flag
+   \   000097   E0           MOVX    A,@DPTR
+   \   000098   D2E1         SETB    0xE0 /* A   */.1
+   \   00009A   F0           MOVX    @DPTR,A
+     89          		return 10000;
+   \   00009B   7A00         MOV     R2,#0x0
+   \   00009D   7B40         MOV     R3,#0x40
+   \   00009F   7C1C         MOV     R4,#0x1c
+   \   0000A1   7D46         MOV     R5,#0x46
+   \   0000A3   02....       LJMP    ??GasSenConcentration_1 & 0xFFFF
+     90          	}
+     91          	//循环，判断比率所在的区间，得到的i值为区间（以坐标数组形式）下标
+     92          	for(i=0;i<NumOfFig1Coor;i++)				
+   \                     ??GasSenConcentration_2:
+   \   0000A6   75..00       MOV     ?V0 + 6,#0x0
+     93          	{	
+     94          		if((RsR0_Ratio1 <= Fig1Data_Methane[i][1]) && (RsR0_Ratio1 >Fig1Data_Methane[i+1][1]))	
+   \                     ??GasSenConcentration_3:
+   \   0000A9   85....       MOV     ?V0 + 4,?V0 + 6
+   \   0000AC   75..00       MOV     ?V0 + 5,#0x0
+   \   0000AF   7403         MOV     A,#0x3
+   \   0000B1   78..         MOV     R0,#?V0 + 4
+   \   0000B3   12....       LCALL   ?S_SHL
+   \   0000B6   74..         MOV     A,#(Fig1Data_Methane + 4) & 0xff
+   \   0000B8   25..         ADD     A,?V0 + 4
+   \   0000BA   F582         MOV     DPL,A
+   \   0000BC   74..         MOV     A,#((Fig1Data_Methane + 4) >> 8) & 0xff
+   \   0000BE   35..         ADDC    A,?V0 + 5
+   \   0000C0   F583         MOV     DPH,A
+   \   0000C2   78..         MOV     R0,#?V0 + 8
+   \   0000C4   12....       LCALL   ?L_MOV_X
+   \   0000C7   78..         MOV     R0,#?V0 + 8
+   \   0000C9   79..         MOV     R1,#?V0 + 0
+   \   0000CB   12....       LCALL   ?FLT_GE
+   \   0000CE   5027         JNC     ??GasSenConcentration_4
+   \   0000D0   85....       MOV     ?V0 + 4,?V0 + 6
+   \   0000D3   75..00       MOV     ?V0 + 5,#0x0
+   \   0000D6   7403         MOV     A,#0x3
+   \   0000D8   78..         MOV     R0,#?V0 + 4
+   \   0000DA   12....       LCALL   ?S_SHL
+   \   0000DD   74..         MOV     A,#(Fig1Data_Methane + 12) & 0xff
+   \   0000DF   25..         ADD     A,?V0 + 4
+   \   0000E1   F582         MOV     DPL,A
+   \   0000E3   74..         MOV     A,#((Fig1Data_Methane + 12) >> 8) & 0xff
+   \   0000E5   35..         ADDC    A,?V0 + 5
+   \   0000E7   F583         MOV     DPH,A
+   \   0000E9   78..         MOV     R0,#?V0 + 8
+   \   0000EB   12....       LCALL   ?L_MOV_X
+   \   0000EE   78..         MOV     R0,#?V0 + 8
+   \   0000F0   79..         MOV     R1,#?V0 + 0
+   \   0000F2   12....       LCALL   ?FLT_LT
+   \   0000F5   4009         JC      ??GasSenConcentration_5
+     95          		break;
+     96          	}
+   \                     ??GasSenConcentration_4:
+   \   0000F7   05..         INC     ?V0 + 6
+   \   0000F9   E5..         MOV     A,?V0 + 6
+   \   0000FB   C3           CLR     C
+   \   0000FC   9413         SUBB    A,#0x13
+   \   0000FE   40A9         JC      ??GasSenConcentration_3
+     97          	//获得比率对应的浓度值
+     98          	concentration = GetXFromTwoPoint(Fig1Data_Methane[i][0],Fig1Data_Methane[i][1],Fig1Data_Methane[i+1][0],Fig1Data_Methane[i+1][1],RsR0_Ratio1);	
+   \                     ??GasSenConcentration_5:
+   \   000100   75..00       MOV     ?V0 + 7,#0x0
+   \   000103   7403         MOV     A,#0x3
+   \   000105   78..         MOV     R0,#?V0 + 6
+   \   000107   12....       LCALL   ?S_SHL
+   \   00010A   74..         MOV     A,#Fig1Data_Methane & 0xff
+   \   00010C   25..         ADD     A,?V0 + 6
+   \   00010E   F8           MOV     R0,A
+   \   00010F   74..         MOV     A,#(Fig1Data_Methane >> 8) & 0xff
+   \   000111   35..         ADDC    A,?V0 + 7
+   \   000113   F9           MOV     R1,A
+   \   000114   E8           MOV     A,R0
+   \   000115   FE           MOV     R6,A
+   \   000116   E9           MOV     A,R1
+   \   000117   FF           MOV     R7,A
+   \   000118   EE           MOV     A,R6
+   \   000119   240C         ADD     A,#0xc
+   \   00011B   F582         MOV     DPL,A
+   \   00011D   EF           MOV     A,R7
+   \   00011E   3400         ADDC    A,#0x0
+   \   000120   F583         MOV     DPH,A
+   \   000122   12....       LCALL   ?XLOAD_R2345
+   \   000125   7405         MOV     A,#0x5
+   \   000127   12....       LCALL   ?XSTACK_DISP0_8
+   \   00012A   12....       LCALL   ?XSTORE_R2345
+   \   00012D   8E82         MOV     DPL,R6
+   \   00012F   8F83         MOV     DPH,R7
+   \   000131   A3           INC     DPTR
+   \   000132   A3           INC     DPTR
+   \   000133   A3           INC     DPTR
+   \   000134   A3           INC     DPTR
+   \   000135   A3           INC     DPTR
+   \   000136   A3           INC     DPTR
+   \   000137   A3           INC     DPTR
+   \   000138   A3           INC     DPTR
+   \   000139   12....       LCALL   ?XLOAD_R2345
+   \   00013C   7401         MOV     A,#0x1
+   \   00013E   12....       LCALL   ?XSTACK_DISP0_8
+   \   000141   12....       LCALL   ?XSTORE_R2345
+   \   000144   8E82         MOV     DPL,R6
+   \   000146   8F83         MOV     DPH,R7
+   \   000148   A3           INC     DPTR
+   \   000149   A3           INC     DPTR
+   \   00014A   A3           INC     DPTR
+   \   00014B   A3           INC     DPTR
+   \   00014C   78..         MOV     R0,#?V0 + 4
+   \   00014E   12....       LCALL   ?L_MOV_X
+   \   000151   8E82         MOV     DPL,R6
+   \   000153   8F83         MOV     DPH,R7
+   \   000155   78..         MOV     R0,#?V0 + 8
+   \   000157   12....       LCALL   ?L_MOV_X
+   \   00015A   7405         MOV     A,#0x5
+   \   00015C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00015F   78..         MOV     R0,#?V0 + 12
+   \   000161   12....       LCALL   ?L_MOV_X
+   \   000164   78..         MOV     R0,#?V0 + 4
+   \   000166   79..         MOV     R1,#?V0 + 12
+   \   000168   12....       LCALL   ?FLT_EQ
+   \   00016B   702B         JNZ     ??GasSenConcentration_6
+   \   00016D   7401         MOV     A,#0x1
+   \   00016F   12....       LCALL   ?XSTACK_DISP0_8
+   \   000172   78..         MOV     R0,#?V0 + 0
+   \   000174   12....       LCALL   ?L_MOV_X
+   \   000177   78..         MOV     R0,#?V0 + 8
+   \   000179   79..         MOV     R1,#?V0 + 0
+   \   00017B   12....       LCALL   ?FLT_EQ
+   \   00017E   700A         JNZ     ??GasSenConcentration_7
+   \   000180   90....       MOV     DPTR,#__Constant_0
+   \   000183   78..         MOV     R0,#?V0 + 0
+   \   000185   12....       LCALL   ?L_MOV_X
+   \   000188   8058         SJMP    ??GasSenConcentration_8
+   \                     ??GasSenConcentration_7:
+   \   00018A   85....       MOV     ?V0 + 0,?V0 + 4
+   \   00018D   85....       MOV     ?V0 + 1,?V0 + 5
+   \   000190   85....       MOV     ?V0 + 2,?V0 + 6
+   \   000193   85....       MOV     ?V0 + 3,?V0 + 7
+   \   000196   804A         SJMP    ??GasSenConcentration_8
+   \                     ??GasSenConcentration_6:
+   \   000198   7401         MOV     A,#0x1
+   \   00019A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00019D   78..         MOV     R0,#?V0 + 12
+   \   00019F   12....       LCALL   ?L_MOV_X
+   \   0001A2   78..         MOV     R0,#?V0 + 12
+   \   0001A4   79..         MOV     R1,#?V0 + 8
+   \   0001A6   12....       LCALL   ?FLT_SUB
+   \   0001A9   78..         MOV     R0,#?V0 + 0
+   \   0001AB   79..         MOV     R1,#?V0 + 4
+   \   0001AD   12....       LCALL   ?FLT_SUB
+   \   0001B0   78..         MOV     R0,#?V0 + 12
+   \   0001B2   79..         MOV     R1,#?V0 + 0
+   \   0001B4   12....       LCALL   ?FLT_MUL
+   \   0001B7   85....       MOV     ?V0 + 0,?V0 + 12
+   \   0001BA   85....       MOV     ?V0 + 1,?V0 + 13
+   \   0001BD   85....       MOV     ?V0 + 2,?V0 + 14
+   \   0001C0   85....       MOV     ?V0 + 3,?V0 + 15
+   \   0001C3   7405         MOV     A,#0x5
+   \   0001C5   12....       LCALL   ?XSTACK_DISP0_8
+   \   0001C8   78..         MOV     R0,#?V0 + 12
+   \   0001CA   12....       LCALL   ?L_MOV_X
+   \   0001CD   78..         MOV     R0,#?V0 + 12
+   \   0001CF   79..         MOV     R1,#?V0 + 4
+   \   0001D1   12....       LCALL   ?FLT_SUB
+   \   0001D4   78..         MOV     R0,#?V0 + 0
+   \   0001D6   79..         MOV     R1,#?V0 + 12
+   \   0001D8   12....       LCALL   ?FLT_DIV
+   \   0001DB   78..         MOV     R0,#?V0 + 0
+   \   0001DD   79..         MOV     R1,#?V0 + 8
+   \   0001DF   12....       LCALL   ?FLT_ADD
+     99          	return concentration;
+   \                     ??GasSenConcentration_8:
+   \   0001E2   AA..         MOV     R2,?V0 + 0
+   \   0001E4   AB..         MOV     R3,?V0 + 1
+   \   0001E6   AC..         MOV     R4,?V0 + 2
+   \   0001E8   AD..         MOV     R5,?V0 + 3
+   \                     ??GasSenConcentration_1:
+   \   0001EA   7409         MOV     A,#0x9
+   \   0001EC                REQUIRE ?Subroutine0
+   \   0001EC                ; // Fall through to label ?Subroutine0
+    100          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000003   7F10         MOV     R7,#0x10
+   \   000005   02....       LJMP    ?BANKED_LEAVE_XDATA
+    101          
+    102          
+    103          
+    104          //参数：从DHT11获取的温湿度数据，分辨率为1，如果使用更加精准的温湿度传感器，需要改变输入参数的类型
+    105          //返还：补偿后的R0值
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    106          float GetCookedRo(char DHT11_T,unsigned char DHT11_R)
+   \                     GetCookedRo:
+    107          {
+   \   000000   74E8         MOV     A,#-0x18
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 24
+   \   000005                ; Auto size: 26
+   \   000005   74E6         MOV     A,#-0x1a
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   E9           MOV     A,R1
+   \   00000B   FF           MOV     R7,A
+   \   00000C   EA           MOV     A,R2
+   \   00000D   FE           MOV     R6,A
+    108          	char sub_T_Arr=0;
+    109          	char sub_R_Arr=0;		//记录温湿度数据在温度，湿度数组中的下标（即在数组中的位置）
+    110          	float RsR0_Ratio0=0;		//最终需要得到的结果
+    111          	float TwoCoordinate[][2]=	//用于记录求目标数据所在直线的两个点的坐标
+    112          	{
+    113          		{0,0},			//靠左的点
+    114          		{0,0},			//靠右的点
+    115          	};
+   \   00000E   740A         MOV     A,#0xa
+   \   000010   12....       LCALL   ?XSTACK_DISP0_8
+   \   000013   AC82         MOV     R4,DPL
+   \   000015   AD83         MOV     R5,DPH
+   \   000017   7583..       MOV     DPH,#(`?<Constant {{(0.0F), (0.0F)}, {(0.0F), (0.0F)}` >> 8) & 0xff
+   \   00001A   7582..       MOV     DPL,#`?<Constant {{(0.0F), (0.0F)}, {(0.0F), (0.0F)}` & 0xff
+   \   00001D   7410         MOV     A,#0x10
+   \   00001F   12....       LCALL   ?MOVE_LONG8_XDATA_XDATA
+    116                  char TEMP_ARR[20];
+                              ^
+Warning[Pe177]: variable "TEMP_ARR" was declared but never referenced
+    117          
+    118          	if(DHT11_T > GasSen_T[GasSen_T_Leghth-1])	//测得的温度值高于范围，置位标志位的位2
+   \   000022   90....       MOV     DPTR,#GasSen_T + 10
+   \   000025   8F..         MOV     ?V0 + 0,R7
+   \   000027   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_0:
+   \   00002A   500A         JNC     ??GetCookedRo_0
+    119          	{
+    120                    DHT11_T = GasSen_TEMP_MAX;  //设置温湿度为默认值
+   \   00002C   7F28         MOV     R7,#0x28
+    121          	  GasSen_Flag |=(1<<2);
+   \   00002E   90....       MOV     DPTR,#GasSen_Flag
+   \   000031   E0           MOVX    A,@DPTR
+   \   000032   D2E2         SETB    0xE0 /* A   */.2
+   \   000034   8015         SJMP    ??GetCookedRo_1
+    122          	}
+    123          	else if(DHT11_T < GasSen_T[0])			//测得的温度值低于范围，置位标志位的位3
+   \                     ??GetCookedRo_0:
+   \   000036   90....       MOV     DPTR,#GasSen_T
+   \   000039   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_4:
+   \   00003C   C3           CLR     C
+   \   00003D   EF           MOV     A,R7
+   \   00003E   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_12:
+   \   000041   5009         JNC     ??GetCookedRo_2
+    124          	{
+    125                    DHT11_T = (char)GasSen_TEMP_MIN;   //设置温湿度为默认值
+   \   000043   7FF6         MOV     R7,#-0xa
+    126          	  GasSen_Flag |=(1<<3);
+   \   000045   90....       MOV     DPTR,#GasSen_Flag
+   \   000048   E0           MOVX    A,@DPTR
+   \   000049   D2E3         SETB    0xE0 /* A   */.3
+   \                     ??GetCookedRo_1:
+   \   00004B   F0           MOVX    @DPTR,A
+    127          	}
+    128          
+    129          	if(DHT11_R > GasSen_R[GasSen_R_Leghth-1])	//测得的湿度值高于范围，置位标志位的位4
+   \                     ??GetCookedRo_2:
+   \   00004C   90....       MOV     DPTR,#GasSen_R + 4
+   \   00004F   E0           MOVX    A,@DPTR
+   \   000050   C3           CLR     C
+   \   000051   9E           SUBB    A,R6
+   \   000052   500A         JNC     ??GetCookedRo_3
+    130          	{
+    131                     DHT11_R =  GasSen_HUMI_MAX;
+   \   000054   7E64         MOV     R6,#0x64
+    132          	   GasSen_Flag |=(1<<4);
+   \   000056   90....       MOV     DPTR,#GasSen_Flag
+   \   000059   E0           MOVX    A,@DPTR
+   \   00005A   D2E4         SETB    0xE0 /* A   */.4
+   \   00005C   8012         SJMP    ??GetCookedRo_4
+    133          	}
+    134          	else if(DHT11_R < GasSen_R[0])			//测得的湿度值高于范围,置位标志位的位5
+   \                     ??GetCookedRo_3:
+   \   00005E   90....       MOV     DPTR,#GasSen_R
+   \   000061   E0           MOVX    A,@DPTR
+   \   000062   F8           MOV     R0,A
+   \   000063   EE           MOV     A,R6
+   \   000064   C3           CLR     C
+   \   000065   98           SUBB    A,R0
+   \   000066   5009         JNC     ??GetCookedRo_5
+    135          	{
+    136                    DHT11_R =  GasSen_HUMI_MIN;
+   \   000068   7E00         MOV     R6,#0x0
+    137          	  GasSen_Flag |=(1<<5);
+   \   00006A   90....       MOV     DPTR,#GasSen_Flag
+   \   00006D   E0           MOVX    A,@DPTR
+   \   00006E   D2E5         SETB    0xE0 /* A   */.5
+   \                     ??GetCookedRo_4:
+   \   000070   F0           MOVX    @DPTR,A
+    138          	}
+    139          
+    140          	//循环，判断在哪个温度的区间，得到数组的下标
+    141          	for(sub_T_Arr=0; sub_T_Arr<GasSen_T_Leghth; sub_T_Arr++)				
+   \                     ??GetCookedRo_5:
+   \   000071   75..00       MOV     ?V0 + 2,#0x0
+    142          	{	
+    143          		if((DHT11_T >= GasSen_T[sub_T_Arr]) && (DHT11_T <= GasSen_T[sub_T_Arr+1]))	
+   \                     ??GetCookedRo_6:
+   \   000074   8F..         MOV     ?V0 + 0,R7
+   \   000076   E5..         MOV     A,?V0 + 2
+   \   000078   C3           CLR     C
+   \   000079   33           RLC     A
+   \   00007A   F8           MOV     R0,A
+   \   00007B   E4           CLR     A
+   \   00007C   33           RLC     A
+   \   00007D   F9           MOV     R1,A
+   \   00007E   74..         MOV     A,#GasSen_T & 0xff
+   \   000080   28           ADD     A,R0
+   \   000081   F582         MOV     DPL,A
+   \   000083   74..         MOV     A,#(GasSen_T >> 8) & 0xff
+   \   000085   39           ADDC    A,R1
+   \   000086   F583         MOV     DPH,A
+   \   000088   12....       LCALL   ?Subroutine3 & 0xFFFF
+    144          		break;
+    145          	}
+   \                     ??CrossCallReturnLabel_5:
+   \   00008B   C3           CLR     C
+   \   00008C   E5..         MOV     A,?V0 + 0
+   \   00008E   12....       LCALL   ?Subroutine5 & 0xFFFF
+   \                     ??CrossCallReturnLabel_13:
+   \   000091   4017         JC      ??GetCookedRo_7
+   \   000093   E5..         MOV     A,?V0 + 2
+   \   000095   C3           CLR     C
+   \   000096   33           RLC     A
+   \   000097   F8           MOV     R0,A
+   \   000098   E4           CLR     A
+   \   000099   33           RLC     A
+   \   00009A   F9           MOV     R1,A
+   \   00009B   74..         MOV     A,#(GasSen_T + 2) & 0xff
+   \   00009D   28           ADD     A,R0
+   \   00009E   F582         MOV     DPL,A
+   \   0000A0   74..         MOV     A,#((GasSen_T + 2) >> 8) & 0xff
+   \   0000A2   39           ADDC    A,R1
+   \   0000A3   F583         MOV     DPH,A
+   \   0000A5   12....       LCALL   ?Subroutine1 & 0xFFFF
+   \                     ??CrossCallReturnLabel_1:
+   \   0000A8   5009         JNC     ??GetCookedRo_8
+   \                     ??GetCookedRo_7:
+   \   0000AA   05..         INC     ?V0 + 2
+   \   0000AC   E5..         MOV     A,?V0 + 2
+   \   0000AE   C3           CLR     C
+   \   0000AF   9406         SUBB    A,#0x6
+   \   0000B1   40C1         JC      ??GetCookedRo_6
+    146          	//循环，判断在哪个湿度的区间，得到数组的下标
+    147          	for(sub_R_Arr=0; sub_R_Arr<GasSen_R_Leghth; sub_R_Arr++)				
+   \                     ??GetCookedRo_8:
+   \   0000B3   7800         MOV     R0,#0x0
+    148          	{	
+    149          		if((DHT11_R >= GasSen_R[sub_R_Arr]) && (DHT11_R <= GasSen_R[sub_R_Arr+1]))	
+   \                     ??GetCookedRo_9:
+   \   0000B5   88..         MOV     ?V0 + 0,R0
+   \   0000B7   74..         MOV     A,#GasSen_R & 0xff
+   \   0000B9   25..         ADD     A,?V0 + 0
+   \   0000BB   F582         MOV     DPL,A
+   \   0000BD   74..         MOV     A,#(GasSen_R >> 8) & 0xff
+   \   0000BF   3400         ADDC    A,#0x0
+   \   0000C1   F583         MOV     DPH,A
+   \   0000C3   E0           MOVX    A,@DPTR
+   \   0000C4   F9           MOV     R1,A
+   \   0000C5   EE           MOV     A,R6
+   \   0000C6   C3           CLR     C
+   \   0000C7   99           SUBB    A,R1
+   \   0000C8   4011         JC      ??GetCookedRo_10
+   \   0000CA   74..         MOV     A,#(GasSen_R + 1) & 0xff
+   \   0000CC   25..         ADD     A,?V0 + 0
+   \   0000CE   F582         MOV     DPL,A
+   \   0000D0   74..         MOV     A,#((GasSen_R + 1) >> 8) & 0xff
+   \   0000D2   3400         ADDC    A,#0x0
+   \   0000D4   F583         MOV     DPH,A
+   \   0000D6   E0           MOVX    A,@DPTR
+   \   0000D7   C3           CLR     C
+   \   0000D8   9E           SUBB    A,R6
+   \   0000D9   5007         JNC     ??GetCookedRo_11
+    150          		break;
+    151          	}
+   \                     ??GetCookedRo_10:
+   \   0000DB   08           INC     R0
+   \   0000DC   E8           MOV     A,R0
+   \   0000DD   C3           CLR     C
+   \   0000DE   9405         SUBB    A,#0x5
+   \   0000E0   40D3         JC      ??GetCookedRo_9
+    152          	
+    153          	//计算两点坐标
+    154          	TwoCoordinate[0][0] = Fig2_Data[sub_R_Arr][sub_T_Arr][0];
+   \                     ??GetCookedRo_11:
+   \   0000E2   8882         MOV     DPL,R0
+   \   0000E4   8582..       MOV     ?V0 + 0,DPL
+   \   0000E7   E8           MOV     A,R0
+   \   0000E8   75F030       MOV     B,#0x30
+   \   0000EB   A4           MUL     AB
+   \   0000EC   F8           MOV     R0,A
+   \   0000ED   A9F0         MOV     R1,B
+   \   0000EF   74..         MOV     A,#Fig2_Data & 0xff
+   \   0000F1   28           ADD     A,R0
+   \   0000F2   F8           MOV     R0,A
+   \   0000F3   74..         MOV     A,#(Fig2_Data >> 8) & 0xff
+   \   0000F5   39           ADDC    A,R1
+   \   0000F6   F9           MOV     R1,A
+   \   0000F7   7404         MOV     A,#0x4
+   \   0000F9   12....       LCALL   ?XSTACK_DISP0_8
+   \   0000FC   E8           MOV     A,R0
+   \   0000FD   F0           MOVX    @DPTR,A
+   \   0000FE   A3           INC     DPTR
+   \   0000FF   E9           MOV     A,R1
+   \   000100   F0           MOVX    @DPTR,A
+   \   000101   75..00       MOV     ?V0 + 3,#0x0
+   \   000104   7403         MOV     A,#0x3
+   \   000106   78..         MOV     R0,#?V0 + 2
+   \   000108   12....       LCALL   ?S_SHL
+   \   00010B   7402         MOV     A,#0x2
+   \   00010D   12....       LCALL   ?XSTACK_DISP0_8
+   \   000110   E5..         MOV     A,?V0 + 2
+   \   000112   F0           MOVX    @DPTR,A
+   \   000113   A3           INC     DPTR
+   \   000114   E5..         MOV     A,?V0 + 3
+   \   000116   F0           MOVX    @DPTR,A
+   \   000117   7402         MOV     A,#0x2
+   \   000119   12....       LCALL   ?XSTACK_DISP0_8
+   \   00011C   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_6:
+   \   00011F   7404         MOV     A,#0x4
+   \   000121   12....       LCALL   ?XSTACK_DISP0_8
+   \   000124   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_9:
+   \   000127   85..82       MOV     DPL,?XSP + 0
+   \   00012A   85..83       MOV     DPH,?XSP + 1
+   \   00012D   E8           MOV     A,R0
+   \   00012E   F0           MOVX    @DPTR,A
+   \   00012F   A3           INC     DPTR
+   \   000130   E9           MOV     A,R1
+   \   000131   F0           MOVX    @DPTR,A
+   \   000132   85..82       MOV     DPL,?XSP + 0
+   \   000135   85..83       MOV     DPH,?XSP + 1
+   \   000138   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_14:
+   \   00013B   12....       LCALL   ?XLOAD_R2345
+   \   00013E   740A         MOV     A,#0xa
+   \   000140   12....       LCALL   ?XSTACK_DISP0_8
+   \   000143   12....       LCALL   ?XSTORE_R2345
+    155          	TwoCoordinate[1][0] = Fig2_Data[sub_R_Arr][sub_T_Arr+1][0];
+   \   000146   85..82       MOV     DPL,?XSP + 0
+   \   000149   85..83       MOV     DPH,?XSP + 1
+   \   00014C   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_2:
+   \   00014F   A3           INC     DPTR
+   \   000150   A3           INC     DPTR
+   \   000151   A3           INC     DPTR
+   \   000152   A3           INC     DPTR
+   \   000153   12....       LCALL   ?XLOAD_R2345
+   \   000156   7406         MOV     A,#0x6
+   \   000158   12....       LCALL   ?XSTACK_DISP0_8
+   \   00015B   12....       LCALL   ?XSTORE_R2345
+   \   00015E   7406         MOV     A,#0x6
+   \   000160   12....       LCALL   ?XSTACK_DISP0_8
+   \   000163   12....       LCALL   ?XLOAD_R2345
+   \   000166   7412         MOV     A,#0x12
+   \   000168   12....       LCALL   ?XSTACK_DISP0_8
+   \   00016B   12....       LCALL   ?XSTORE_R2345
+    156          	TwoCoordinate[0][1] = GetYFromTwoPoint(GasSen_R[sub_R_Arr] , Fig2_Data[sub_R_Arr][sub_T_Arr][1] , GasSen_R[sub_R_Arr+1] , Fig2_Data[sub_R_Arr+1][sub_T_Arr][1],DHT11_R);
+   \   00016E   74..         MOV     A,#GasSen_R & 0xff
+   \   000170   25..         ADD     A,?V0 + 0
+   \   000172   F8           MOV     R0,A
+   \   000173   74..         MOV     A,#(GasSen_R >> 8) & 0xff
+   \   000175   3400         ADDC    A,#0x0
+   \   000177   F9           MOV     R1,A
+   \   000178   E8           MOV     A,R0
+   \   000179   FA           MOV     R2,A
+   \   00017A   E9           MOV     A,R1
+   \   00017B   FB           MOV     R3,A
+   \   00017C   8A82         MOV     DPL,R2
+   \   00017E   8B83         MOV     DPH,R3
+   \   000180   A3           INC     DPTR
+   \   000181   E0           MOVX    A,@DPTR
+   \   000182   F5..         MOV     ?V0 + 4,A
+   \   000184   E4           CLR     A
+   \   000185   F5..         MOV     ?V0 + 5,A
+   \   000187   F5..         MOV     ?V0 + 6,A
+   \   000189   F5..         MOV     ?V0 + 7,A
+   \   00018B   78..         MOV     R0,#?V0 + 4
+   \   00018D   12....       LCALL   ?UL_TO_FLT
+   \   000190   8A82         MOV     DPL,R2
+   \   000192   8B83         MOV     DPH,R3
+   \   000194   E0           MOVX    A,@DPTR
+   \   000195   F5..         MOV     ?V0 + 8,A
+   \   000197   E4           CLR     A
+   \   000198   F5..         MOV     ?V0 + 9,A
+   \   00019A   F5..         MOV     ?V0 + 10,A
+   \   00019C   F5..         MOV     ?V0 + 11,A
+   \   00019E   78..         MOV     R0,#?V0 + 8
+   \   0001A0   12....       LCALL   ?UL_TO_FLT
+   \   0001A3   8E..         MOV     ?V0 + 12,R6
+   \   0001A5   E4           CLR     A
+   \   0001A6   F5..         MOV     ?V0 + 13,A
+   \   0001A8   F5..         MOV     ?V0 + 14,A
+   \   0001AA   F5..         MOV     ?V0 + 15,A
+   \   0001AC   78..         MOV     R0,#?V0 + 12
+   \   0001AE   12....       LCALL   ?UL_TO_FLT
+   \   0001B1                ; Setup parameters for call to function GetYFromTwoPoint
+   \   0001B1   78..         MOV     R0,#?V0 + 12
+   \   0001B3   12....       LCALL   ?PUSH_XSTACK_I_FOUR
+   \   0001B6   7406         MOV     A,#0x6
+   \   0001B8   12....       LCALL   ?XSTACK_DISP0_8
+   \   0001BB   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_7:
+   \   0001BE   7408         MOV     A,#0x8
+   \   0001C0   12....       LCALL   ?XSTACK_DISP0_8
+   \   0001C3   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_10:
+   \   0001C6   E8           MOV     A,R0
+   \   0001C7   2434         ADD     A,#0x34
+   \   0001C9   F582         MOV     DPL,A
+   \   0001CB   E9           MOV     A,R1
+   \   0001CC   3400         ADDC    A,#0x0
+   \   0001CE   F583         MOV     DPH,A
+   \   0001D0   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   0001D3   78..         MOV     R0,#?V0 + 4
+   \   0001D5   12....       LCALL   ?PUSH_XSTACK_I_FOUR
+   \   0001D8   740C         MOV     A,#0xc
+   \   0001DA   12....       LCALL   ?XSTACK_DISP0_8
+   \   0001DD   12....       LCALL   ?Subroutine2 & 0xFFFF
+   \                     ??CrossCallReturnLabel_3:
+   \   0001E0   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   0001E3   AA..         MOV     R2,?V0 + 8
+   \   0001E5   AB..         MOV     R3,?V0 + 9
+   \   0001E7   AC..         MOV     R4,?V0 + 10
+   \   0001E9   AD..         MOV     R5,?V0 + 11
+   \   0001EB   12....       LCALL   ??GetYFromTwoPoint?relay
+   \   0001EE   7410         MOV     A,#0x10
+   \   0001F0   12....       LCALL   ?DEALLOC_XSTACK8
+   \   0001F3   8A..         MOV     ?V0 + 0,R2
+   \   0001F5   8B..         MOV     ?V0 + 1,R3
+   \   0001F7   8C..         MOV     ?V0 + 2,R4
+   \   0001F9   8D..         MOV     ?V0 + 3,R5
+   \   0001FB   740E         MOV     A,#0xe
+   \   0001FD   12....       LCALL   ?XSTACK_DISP0_8
+   \   000200   78..         MOV     R0,#?V0 + 0
+   \   000202   12....       LCALL   ?L_MOV_TO_X
+    157          	TwoCoordinate[1][1] = GetYFromTwoPoint(GasSen_R[sub_R_Arr] , Fig2_Data[sub_R_Arr][sub_T_Arr+1][1] , GasSen_R[sub_R_Arr+1] , Fig2_Data[sub_R_Arr+1][sub_T_Arr+1][1],DHT11_R);
+   \   000205                ; Setup parameters for call to function GetYFromTwoPoint
+   \   000205   78..         MOV     R0,#?V0 + 12
+   \   000207   12....       LCALL   ?PUSH_XSTACK_I_FOUR
+   \   00020A   7406         MOV     A,#0x6
+   \   00020C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00020F   12....       LCALL   ?Subroutine3 & 0xFFFF
+   \                     ??CrossCallReturnLabel_8:
+   \   000212   7408         MOV     A,#0x8
+   \   000214   12....       LCALL   ?XSTACK_DISP0_8
+   \   000217   12....       LCALL   ?Subroutine4 & 0xFFFF
+   \                     ??CrossCallReturnLabel_11:
+   \   00021A   E8           MOV     A,R0
+   \   00021B   243C         ADD     A,#0x3c
+   \   00021D   F582         MOV     DPL,A
+   \   00021F   E9           MOV     A,R1
+   \   000220   3400         ADDC    A,#0x0
+   \   000222   F583         MOV     DPH,A
+   \   000224   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   000227   78..         MOV     R0,#?V0 + 4
+   \   000229   12....       LCALL   ?PUSH_XSTACK_I_FOUR
+   \   00022C   740C         MOV     A,#0xc
+   \   00022E   12....       LCALL   ?XSTACK_DISP0_8
+   \   000231   E0           MOVX    A,@DPTR
+   \   000232   240C         ADD     A,#0xc
+   \   000234   F8           MOV     R0,A
+   \   000235   A3           INC     DPTR
+   \   000236   E0           MOVX    A,@DPTR
+   \   000237   3400         ADDC    A,#0x0
+   \   000239   F9           MOV     R1,A
+   \   00023A   8882         MOV     DPL,R0
+   \   00023C   8983         MOV     DPH,R1
+   \   00023E   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   000241   AA..         MOV     R2,?V0 + 8
+   \   000243   AB..         MOV     R3,?V0 + 9
+   \   000245   AC..         MOV     R4,?V0 + 10
+   \   000247   AD..         MOV     R5,?V0 + 11
+   \   000249   12....       LCALL   ??GetYFromTwoPoint?relay
+   \   00024C   7410         MOV     A,#0x10
+   \   00024E   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000251   8A..         MOV     ?V0 + 4,R2
+   \   000253   8B..         MOV     ?V0 + 5,R3
+   \   000255   8C..         MOV     ?V0 + 6,R4
+   \   000257   8D..         MOV     ?V0 + 7,R5
+   \   000259   7416         MOV     A,#0x16
+   \   00025B   12....       LCALL   ?XSTACK_DISP0_8
+   \   00025E   78..         MOV     R0,#?V0 + 4
+   \   000260   12....       LCALL   ?L_MOV_TO_X
+    158          	
+    159          	//得到结果，Rs和R0的比值
+    160          	RsR0_Ratio0 = GetYFromTwoPoint(TwoCoordinate[0][0],TwoCoordinate[0][1],TwoCoordinate[1][0],TwoCoordinate[1][1],DHT11_T);
+    161          
+    162          	return RsR0_Ratio0 * GasSen_Standard_R0;
+   \   000263                ; Setup parameters for call to function GetYFromTwoPoint
+   \   000263   8F..         MOV     ?V0 + 8,R7
+   \   000265   E4           CLR     A
+   \   000266   F5..         MOV     ?V0 + 9,A
+   \   000268   F5..         MOV     ?V0 + 10,A
+   \   00026A   F5..         MOV     ?V0 + 11,A
+   \   00026C   78..         MOV     R0,#?V0 + 8
+   \   00026E   12....       LCALL   ?UL_TO_FLT
+   \   000271   78..         MOV     R0,#?V0 + 8
+   \   000273   12....       LCALL   ?PUSH_XSTACK_I_FOUR
+   \   000276   78..         MOV     R0,#?V0 + 4
+   \   000278   12....       LCALL   ?PUSH_XSTACK_I_FOUR
+   \   00027B   740E         MOV     A,#0xe
+   \   00027D   12....       LCALL   ?XSTACK_DISP0_8
+   \   000280   12....       LCALL   ?PUSH_XSTACK8_X_FOUR
+   \   000283   78..         MOV     R0,#?V0 + 0
+   \   000285   12....       LCALL   ?PUSH_XSTACK_I_FOUR
+   \   000288   741A         MOV     A,#0x1a
+   \   00028A   12....       LCALL   ?XSTACK_DISP0_8
+   \   00028D   12....       LCALL   ?XLOAD_R2345
+   \   000290   12....       LCALL   ??GetYFromTwoPoint?relay
+   \   000293   7410         MOV     A,#0x10
+   \   000295   12....       LCALL   ?DEALLOC_XSTACK8
+   \   000298   8A..         MOV     ?V0 + 0,R2
+   \   00029A   8B..         MOV     ?V0 + 1,R3
+   \   00029C   8C..         MOV     ?V0 + 2,R4
+   \   00029E   8D..         MOV     ?V0 + 3,R5
+   \   0002A0   90....       MOV     DPTR,#__Constant_41f00000
+   \   0002A3   78..         MOV     R0,#?V0 + 4
+   \   0002A5   12....       LCALL   ?L_MOV_X
+   \   0002A8   78..         MOV     R0,#?V0 + 0
+   \   0002AA   79..         MOV     R1,#?V0 + 4
+   \   0002AC   12....       LCALL   ?FLT_MUL
+   \   0002AF   AA..         MOV     R2,?V0 + 0
+   \   0002B1   AB..         MOV     R3,?V0 + 1
+   \   0002B3   AC..         MOV     R4,?V0 + 2
+   \   0002B5   AD..         MOV     R5,?V0 + 3
+   \   0002B7   741A         MOV     A,#0x1a
+   \   0002B9   02....       LJMP    ?Subroutine0 & 0xFFFF
+    163          }
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine5:
+   \   000000   98           SUBB    A,R0
+   \   000001   E4           CLR     A
+   \   000002   99           SUBB    A,R1
+   \   000003   A2D2         MOV     C,0xD0 /* PSW */.2
+   \   000005   65D0         XRL     A,PSW
+   \   000007   33           RLC     A
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine4:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   28           ADD     A,R0
+   \   000002   F8           MOV     R0,A
+   \   000003   A3           INC     DPTR
+   \   000004   E0           MOVX    A,@DPTR
+   \   000005   39           ADDC    A,R1
+   \   000006   F9           MOV     R1,A
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   F8           MOV     R0,A
+   \   000002   A3           INC     DPTR
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F9           MOV     R1,A
+   \   000005   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   12....       LCALL   ?Subroutine6 & 0xFFFF
+   \                     ??CrossCallReturnLabel_15:
+   \   000003   A3           INC     DPTR
+   \   000004   A3           INC     DPTR
+   \   000005   A3           INC     DPTR
+   \   000006   A3           INC     DPTR
+   \   000007   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine6:
+   \   000000   E0           MOVX    A,@DPTR
+   \   000001   F8           MOV     R0,A
+   \   000002   A3           INC     DPTR
+   \   000003   E0           MOVX    A,@DPTR
+   \   000004   F583         MOV     DPH,A
+   \   000006   8882         MOV     DPL,R0
+   \   000008   22           RET
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   C3           CLR     C
+   \   000001   E0           MOVX    A,@DPTR
+   \   000002   95..         SUBB    A,?V0 + 0
+   \   000004   A3           INC     DPTR
+   \   000005   E0           MOVX    A,@DPTR
+   \   000006   9400         SUBB    A,#0x0
+   \   000008   A2D2         MOV     C,0xD0 /* PSW */.2
+   \   00000A   65D0         XRL     A,PSW
+   \   00000C   33           RLC     A
+   \   00000D   22           RET
+    164          
+    165          //对于一条通过两点确定的直线，给定一个y值，返还x值
+    166          float GetXFromTwoPoint(float x1,float y1,float x2,float y2,float y)
+    167          {
+    168          	if(y1 == y2)			
+    169          	{
+    170          		if(x1 == x2)
+    171          		{
+    172          			return 0;		//如果输入的两点重合了，则返回0
+    173          		}				
+    174          		return y1;			//如果两点的y坐标相等，则返还y坐标
+    175          	}
+    176          	
+    177          	else
+    178          		return ((x2-x1)*(y-y1))/(y2-y1) + x1;
+    179          }
+    180          //对于一条通过两点确定的直线，给定一个x值，返还y值
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    181          float GetYFromTwoPoint(float x1,float y1,float x2,float y2,float x)
+   \                     GetYFromTwoPoint:
+    182          {
+   \   000000   74E8         MOV     A,#-0x18
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 24
+   \   000005                ; Auto size: 4
+   \   000005   74FC         MOV     A,#-0x4
+   \   000007   12....       LCALL   ?ALLOC_XSTACK8
+   \   00000A   85..82       MOV     DPL,?XSP + 0
+   \   00000D   85..83       MOV     DPH,?XSP + 1
+   \   000010   EA           MOV     A,R2
+   \   000011   F0           MOVX    @DPTR,A
+   \   000012   A3           INC     DPTR
+   \   000013   EB           MOV     A,R3
+   \   000014   F0           MOVX    @DPTR,A
+   \   000015   A3           INC     DPTR
+   \   000016   EC           MOV     A,R4
+   \   000017   F0           MOVX    @DPTR,A
+   \   000018   A3           INC     DPTR
+   \   000019   ED           MOV     A,R5
+   \   00001A   F0           MOVX    @DPTR,A
+   \   00001B   741C         MOV     A,#0x1c
+   \   00001D   12....       LCALL   ?XSTACK_DISP0_8
+   \   000020   78..         MOV     R0,#?V0 + 0
+   \   000022   12....       LCALL   ?L_MOV_X
+   \   000025   7420         MOV     A,#0x20
+   \   000027   12....       LCALL   ?XSTACK_DISP0_8
+   \   00002A   78..         MOV     R0,#?V0 + 4
+   \   00002C   12....       LCALL   ?L_MOV_X
+   \   00002F   7424         MOV     A,#0x24
+   \   000031   12....       LCALL   ?XSTACK_DISP0_8
+   \   000034   78..         MOV     R0,#?V0 + 8
+   \   000036   12....       LCALL   ?L_MOV_X
+    183          	if(x1 == x2)
+   \   000039   85..82       MOV     DPL,?XSP + 0
+   \   00003C   85..83       MOV     DPH,?XSP + 1
+   \   00003F   78..         MOV     R0,#?V0 + 12
+   \   000041   12....       LCALL   ?L_MOV_X
+   \   000044   78..         MOV     R0,#?V0 + 12
+   \   000046   79..         MOV     R1,#?V0 + 4
+   \   000048   12....       LCALL   ?FLT_EQ
+   \   00004B   701E         JNZ     ??GetYFromTwoPoint_0
+    184          	{
+    185          		if(y1 == y2)
+   \   00004D   78..         MOV     R0,#?V0 + 0
+   \   00004F   79..         MOV     R1,#?V0 + 8
+   \   000051   12....       LCALL   ?FLT_EQ
+   \   000054   700A         JNZ     ??GetYFromTwoPoint_1
+    186          		{
+    187          			return 0;		//如果输入的两点重合了，则返回0
+   \   000056   7A00         MOV     R2,#0x0
+   \   000058   7B00         MOV     R3,#0x0
+   \   00005A   7C00         MOV     R4,#0x0
+   \   00005C   7D00         MOV     R5,#0x0
+   \   00005E   806D         SJMP    ??GetYFromTwoPoint_2
+    188          		}	
+    189          		return x1;			//如果两点的x坐标相等，则返还x坐标
+   \                     ??GetYFromTwoPoint_1:
+   \   000060   85..82       MOV     DPL,?XSP + 0
+   \   000063   85..83       MOV     DPH,?XSP + 1
+   \   000066   12....       LCALL   ?XLOAD_R2345
+   \   000069   8062         SJMP    ??GetYFromTwoPoint_2
+    190          	}
+    191          	else
+    192          		return ((y2-y1)*(x-x1))/(x2-x1) + y1;
+   \                     ??GetYFromTwoPoint_0:
+   \   00006B   78..         MOV     R0,#?V0 + 8
+   \   00006D   79..         MOV     R1,#?V0 + 0
+   \   00006F   12....       LCALL   ?FLT_SUB
+   \   000072   C0..         PUSH    ?V0 + 8
+   \   000074   C0..         PUSH    ?V0 + 9
+   \   000076   C0..         PUSH    ?V0 + 10
+   \   000078   C0..         PUSH    ?V0 + 11
+   \   00007A   7428         MOV     A,#0x28
+   \   00007C   12....       LCALL   ?XSTACK_DISP0_8
+   \   00007F   78..         MOV     R0,#?V0 + 12
+   \   000081   12....       LCALL   ?L_MOV_X
+   \   000084   85..82       MOV     DPL,?XSP + 0
+   \   000087   85..83       MOV     DPH,?XSP + 1
+   \   00008A   78..         MOV     R0,#?V0 + 8
+   \   00008C   12....       LCALL   ?L_MOV_X
+   \   00008F   78..         MOV     R0,#?V0 + 12
+   \   000091   79..         MOV     R1,#?V0 + 8
+   \   000093   12....       LCALL   ?FLT_SUB
+   \   000096   D0..         POP     ?V0 + 11
+   \   000098   D0..         POP     ?V0 + 10
+   \   00009A   D0..         POP     ?V0 + 9
+   \   00009C   D0..         POP     ?V0 + 8
+   \   00009E   78..         MOV     R0,#?V0 + 8
+   \   0000A0   79..         MOV     R1,#?V0 + 12
+   \   0000A2   12....       LCALL   ?FLT_MUL
+   \   0000A5   85..82       MOV     DPL,?XSP + 0
+   \   0000A8   85..83       MOV     DPH,?XSP + 1
+   \   0000AB   78..         MOV     R0,#?V0 + 12
+   \   0000AD   12....       LCALL   ?L_MOV_X
+   \   0000B0   78..         MOV     R0,#?V0 + 4
+   \   0000B2   79..         MOV     R1,#?V0 + 12
+   \   0000B4   12....       LCALL   ?FLT_SUB
+   \   0000B7   78..         MOV     R0,#?V0 + 8
+   \   0000B9   79..         MOV     R1,#?V0 + 4
+   \   0000BB   12....       LCALL   ?FLT_DIV
+   \   0000BE   78..         MOV     R0,#?V0 + 8
+   \   0000C0   79..         MOV     R1,#?V0 + 0
+   \   0000C2   12....       LCALL   ?FLT_ADD
+   \   0000C5   AA..         MOV     R2,?V0 + 8
+   \   0000C7   AB..         MOV     R3,?V0 + 9
+   \   0000C9   AC..         MOV     R4,?V0 + 10
+   \   0000CB   AD..         MOV     R5,?V0 + 11
+   \                     ??GetYFromTwoPoint_2:
+   \   0000CD   7404         MOV     A,#0x4
+   \   0000CF   02....       LJMP    ?Subroutine0 & 0xFFFF
+    193          }
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for GasSen_T>`:
+   \   000000   F6FF         DW -10
+   \   000002   0000         DW 0
+   \   000004   0A00         DW 10
+   \   000006   1400         DW 20
+   \   000008   1E00         DW 30
+   \   00000A   2800         DW 40
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for GasSen_R>`:
+   \   000000   00           DB 0
+   \   000001   14           DB 20
+   \   000002   28           DB 40
+   \   000003   41           DB 65
+   \   000004   64           DB 100
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for Fig1Data_Methane>`:
+   \   000000   0000FA43     DD 43FA0000H
+   \   000004   0000C03F     DD 3FC00000H
+   \   000008   00001644     DD 44160000H
+   \   00000C   3333B33F     DD 3FB33333H
+   \   000010   00002F44     DD 442F0000H
+   \   000014   6666A63F     DD 3FA66666H
+   \   000018   00004844     DD 44480000H
+   \   00001C   9A99993F     DD 3F99999AH
+   \   000020   00006144     DD 44610000H
+   \   000024   CDCC8C3F     DD 3F8CCCCDH
+   \   000028   00007A44     DD 447A0000H
+   \   00002C   0000803F     DD 3F800000H
+   \   000030   0080A244     DD 44A28000H
+   \   000034   6666663F     DD 3F666666H
+   \   000038   0080D444     DD 44D48000H
+   \   00003C   CDCC4C3F     DD 3F4CCCCDH
+   \   000040   0000FA44     DD 44FA0000H
+   \   000044   48E13A3F     DD 3F3AE148H
+   \   000048   00400345     DD 45034000H
+   \   00004C   3333333F     DD 3F333333H
+   \   000050   00803B45     DD 453B8000H
+   \   000054   9A99193F     DD 3F19999AH
+   \   000058   00007A45     DD 457A0000H
+   \   00005C   14AE073F     DD 3F07AE14H
+   \   000060   00808945     DD 45898000H
+   \   000064   0000003F     DD 3F000000H
+   \   000068   00409C45     DD 459C4000H
+   \   00006C   D7A3F03E     DD 3EF0A3D7H
+   \   000070   0080BB45     DD 45BB8000H
+   \   000074   F628DC3E     DD 3EDC28F6H
+   \   000078   00C0DA45     DD 45DAC000H
+   \   00007C   85EBD13E     DD 3ED1EB85H
+   \   000080   0000FA45     DD 45FA0000H
+   \   000084   5C8FC23E     DD 3EC28F5CH
+   \   000088   00A00C46     DD 460CA000H
+   \   00008C   EC51B83E     DD 3EB851ECH
+   \   000090   00401C46     DD 461C4000H
+   \   000094   3333B33E     DD 3EB33333H
+
+   \                                 In  segment XDATA_ID, align 1, keep-with-next
+   \                     `?<Initializer for Fig2_Data>`:
+   \   000000   000020C1     DD 0C1200000H
+   \   000004   295CEF3F     DD 3FEF5C29H
+   \   000008   00000000     DD 0H
+   \   00000C   B81EE53F     DD 3FE51EB8H
+   \   000010   00002041     DD 41200000H
+   \   000014   52B8DE3F     DD 3FDEB852H
+   \   000018   0000A041     DD 41A00000H
+   \   00001C   3D0AD73F     DD 3FD70A3DH
+   \   000020   0000F041     DD 41F00000H
+   \   000024   3333D33F     DD 3FD33333H
+   \   000028   00002042     DD 42200000H
+   \   00002C   7B14CE3F     DD 3FCE147BH
+   \   000030   000020C1     DD 0C1200000H
+   \   000034   A470DD3F     DD 3FDD70A4H
+   \   000038   00000000     DD 0H
+   \   00003C   5C8FC23F     DD 3FC28F5CH
+   \   000040   00002041     DD 41200000H
+   \   000044   CDCCAC3F     DD 3FACCCCDH
+   \   000048   0000A041     DD 41A00000H
+   \   00004C   48E19A3F     DD 3F9AE148H
+   \   000050   0000F041     DD 41F00000H
+   \   000054   295C8F3F     DD 3F8F5C29H
+   \   000058   00002042     DD 42200000H
+   \   00005C   C3F5883F     DD 3F88F5C3H
+   \   000060   000020C1     DD 0C1200000H
+   \   000064   3D0AD73F     DD 3FD70A3DH
+   \   000068   00000000     DD 0H
+   \   00006C   9A99B93F     DD 3FB9999AH
+   \   000070   00002041     DD 41200000H
+   \   000074   0000A03F     DD 3FA00000H
+   \   000078   0000A041     DD 41A00000H
+   \   00007C   CDCC8C3F     DD 3F8CCCCDH
+   \   000080   0000F041     DD 41F00000H
+   \   000084   48E17A3F     DD 3F7AE148H
+   \   000088   00002042     DD 42200000H
+   \   00008C   1F856B3F     DD 3F6B851FH
+   \   000090   000020C1     DD 0C1200000H
+   \   000094   7B14CE3F     DD 3FCE147BH
+   \   000098   00000000     DD 0H
+   \   00009C   CDCCAC3F     DD 3FACCCCDH
+   \   0000A0   00002041     DD 41200000H
+   \   0000A4   3333933F     DD 3F933333H
+   \   0000A8   0000A041     DD 41A00000H
+   \   0000AC   0000803F     DD 3F800000H
+   \   0000B0   0000F041     DD 41F00000H
+   \   0000B4   6666663F     DD 3F666666H
+   \   0000B8   00002042     DD 42200000H
+   \   0000BC   F6285C3F     DD 3F5C28F6H
+   \   0000C0   000020C1     DD 0C1200000H
+   \   0000C4   6666C63F     DD 3FC66666H
+   \   0000C8   00000000     DD 0H
+   \   0000CC   6666A63F     DD 3FA66666H
+   \   0000D0   00002041     DD 41200000H
+   \   0000D4   CDCC8C3F     DD 3F8CCCCDH
+   \   0000D8   0000A041     DD 41A00000H
+   \   0000DC   8FC2753F     DD 3F75C28FH
+   \   0000E0   0000F041     DD 41F00000H
+   \   0000E4   F6285C3F     DD 3F5C28F6H
+   \   0000E8   00002042     DD 42200000H
+   \   0000EC   E17A543F     DD 3F547AE1H
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GasSenConcentration?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GasSenConcentration
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GetCookedRo?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GetCookedRo
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??GetYFromTwoPoint?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    GetYFromTwoPoint
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     `?<Constant {{(0.0F), (0.0F)}, {(0.0F), (0.0F)}`:
+   \   000000   00000000     DD 0H
+   \   000004   00000000     DD 0H
+   \   000008   00000000     DD 0H
+   \   00000C   00000000     DD 0H
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_bf800000:
+   \   000000   000080BF     DD 0BF800000H
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_0:
+   \   000000   00000000     DD 0H
+
+   \                                 In  segment XDATA_ROM_C, align 1
+   \                     __Constant_41f00000:
+   \   000000   0000F041     DD 41F00000H
+    194          /* For Test in VC++
+    195          void main()
+    196          {
+    197          	printf("Gas concertation:%.0fppm\r\n",GasSenConcentration(0.16129f,20,50));
+    198          } */
+
+   Maximum stack usage in bytes:
+
+     Function              ISTACK PSTACK XSTACK
+     --------              ------ ------ ------
+     GasSenConcentration       1      0     34
+       -> GetCookedRo          0      0     66
+     GetCookedRo               2      0     99
+       -> GetYFromTwoPoint     0      0    132
+       -> GetYFromTwoPoint     0      0    132
+       -> GetYFromTwoPoint     0      0    132
+     GetYFromTwoPoint          4      0     94
+
+
+   Segment part sizes:
+
+     Function/Label                                 Bytes
+     --------------                                 -----
+     GasSen_T                                         12
+     GasSen_R                                          5
+     GasSen_Flag                                       1
+     Fig1Data_Methane                                152
+     Fig2_Data                                       240
+     GasSenConcentration                             492
+     ?Subroutine0                                      8
+     GetCookedRo                                     700
+     ?Subroutine5                                      9
+     ?Subroutine4                                      8
+     ?Subroutine3                                      6
+     ?Subroutine2                                      8
+     ?Subroutine6                                      9
+     ?Subroutine1                                     14
+     GetYFromTwoPoint                                210
+     ?<Initializer for GasSen_T>                      12
+     ?<Initializer for GasSen_R>                       5
+     ?<Initializer for Fig1Data_Methane>             152
+     ?<Initializer for Fig2_Data>                    240
+     ??GasSenConcentration?relay                       6
+     ??GetCookedRo?relay                               6
+     ??GetYFromTwoPoint?relay                          6
+     ?<Constant {{(0.0F), (0.0F)}, {(0.0F), (0.0F)}   16
+     __Constant_bf800000                               4
+     __Constant_0                                      4
+     __Constant_41f00000                               4
+
+ 
+ 1 464 bytes in segment BANKED_CODE
+    18 bytes in segment BANK_RELAYS
+   409 bytes in segment XDATA_I
+   409 bytes in segment XDATA_ID
+    28 bytes in segment XDATA_ROM_C
+     1 byte  in segment XDATA_Z
+ 
+ 1 891 bytes of CODE  memory
+    16 bytes of CONST memory (+ 12 bytes shared)
+   410 bytes of XDATA memory
+
+Errors: none
+Warnings: 1

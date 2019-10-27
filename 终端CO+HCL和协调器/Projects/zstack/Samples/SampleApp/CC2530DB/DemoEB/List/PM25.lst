@@ -1,0 +1,331 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.1.40194/W32 for 8051         04/Nov/2017  09:08:26 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\Source\PM25.c          #
+#    Command line       =  -f C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ             #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8       #
+#                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)    #
+#                          -f C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Pro #
+#                          jects\zstack\Samples\SampleApp\CC2530DB\..\..\..\T #
+#                          ools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO           #
+#                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR       #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFF00                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DLINK_STATUS_JITTER_MASK=0x007F                   #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116                           #
+#                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const     #
+#                          __code" -DGENERIC=__generic                        #
+#                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000        #
+#                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)   #
+#                          -DREJOIN_POLL_RATE=440 C:\Users\77564\Desktop\TENZ #
+#                          ×é²¥+PM25+CO+HCL\Projects\zstack\Samples\SampleApp #
+#                          \Source\PM25.c -D BUILD_ALL_DEVICES -D             #
+#                          HOLD_AUTO_START -D LCD_SUPPORTED -D                #
+#                          HAL_UART=FALSE -D ZTOOL_P1 -lC                     #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\DemoEB\List\  #
+#                          -lA C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Pr #
+#                          ojects\zstack\Samples\SampleApp\CC2530DB\DemoEB\Li #
+#                          st\ --diag_suppress Pe001,Pa010 -o                 #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\DemoEB\Obj\   #
+#                          -e --no_code_motion --debug --core=plain           #
+#                          --dptr=16,1 --data_model=large                     #
+#                          --code_model=banked --calling_convention=xdata_ree #
+#                          ntrant --place_constants=data_rom                  #
+#                          --nr_virtual_regs 16 -I C:\Users\77564\Desktop\TEN #
+#                          Z×é²¥+PM25+CO+HCL\Projects\zstack\Samples\SampleAp #
+#                          p\CC2530DB\ -I C:\Users\77564\Desktop\TENZ×é²¥+PM2 #
+#                          5+CO+HCL\Projects\zstack\Samples\SampleApp\CC2530D #
+#                          B\..\Source\ -I C:\Users\77564\Desktop\TENZ×é²¥+PM #
+#                          25+CO+HCL\Projects\zstack\Samples\SampleApp\CC2530 #
+#                          DB\..\..\..\ZMain\TI2530DB\ -I                     #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\include\ -I                       #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\hal\target\CC2530EB\ -I               #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\include\ -I                       #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\high_level\ -I                    #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\ -I               #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mac\low_level\srf04\single_chip\ -I   #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\mt\ -I C:\Users\77564\Desktop\TENZ×é² #
+#                          ¥+PM25+CO+HCL\Projects\zstack\Samples\SampleApp\CC #
+#                          2530DB\..\..\..\..\..\Components\osal\include\ -I  #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\saddr\ -I                    #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\services\sdata\ -I                    #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\af\ -I                          #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\nwk\ -I                         #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sapi\ -I                        #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sec\ -I                         #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\sys\ -I                         #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\stack\zdo\ -I                         #
+#                          C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\..\..\..\..\. #
+#                          .\Components\zmac\ -I C:\Users\77564\Desktop\TENZ× #
+#                          é²¥+PM25+CO+HCL\Projects\zstack\Samples\SampleApp\ #
+#                          CC2530DB\..\..\..\..\..\Components\zmac\f8w\ -Ohz  #
+#                          --require_prototypes                               #
+#    List file          =  C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\DemoEB\List\P #
+#                          M25.lst                                            #
+#    Object file        =  C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projec #
+#                          ts\zstack\Samples\SampleApp\CC2530DB\DemoEB\Obj\PM #
+#                          25.r51                                             #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\77564\Desktop\TENZ×é²¥+PM25+CO+HCL\Projects\zstack\Samples\SampleApp\Source\PM25.c
+      1          #include <PM25.h>
+      2          #include <string.h>
+      3          #include <stdio.h>
+      4          typedef unsigned char   uint8;
+      5          #define uint unsigned int 
+      6          #define uchar unsigned char
+      7          uint8 PM_data[6];
+      8          uchar i=0;
+      9          float count=0;
+     10          float countsum=0;
+     11          float count_aver=0;
+     12          
+     13          void T3init()
+                      ^
+Error[Pa045]: function "T3init" has no prototype
+     14          { 
+     15            T3CTL |= 0x08 ;          //¿ªÒç³öÖÐ¶Ï     
+     16            T3IE = 1;                //¿ª×ÜÖÐ¶ÏºÍT3ÖÐ¶Ï
+     17            T3CTL |= 0xE0;           //128·ÖÆµ,128/16000000*N=0.5S,N=62500
+     18            T3CTL &= ~0x03;          //×Ô¶¯ÖØ×° 00£­>0xff  62500/255=245(´Î)
+     19            T3CTL |= 0x10;           //Æô¶¯
+     20            EA = 1;                  //¿ª×ÜÖÐ¶Ï,Ò»´ÎÖÐ¶Ï¼ÆÊ±0.002048Ãë
+     21          }
+     22          void InitClock(void)
+     23          {   
+     24              CLKCONCMD &= ~0x40;              //ÉèÖÃÏµÍ³Ê±ÖÓÔ´Îª 32MHZ¾§Õñ
+     25              while(CLKCONSTA & 0x40);         //µÈ´ý¾§ÕñÎÈ¶¨ 
+     26              CLKCONCMD &= ~0x47;              //ÉèÖÃÏµÍ³Ö÷Ê±ÖÓÆµÂÊÎª 32MHZ
+     27          }
+     28          
+     29          
+     30          /****************************************************************************
+     31          * Ãû    ³Æ: InitUart()
+     32          * ¹¦    ÄÜ: ´®¿Ú³õÊ¼»¯º¯Êý
+     33          * Èë¿Ú²ÎÊý: ÎÞ
+     34          * ³ö¿Ú²ÎÊý: ÎÞ
+     35          ****************************************************************************/
+     36          void InitUART(void)
+     37          {
+     38              /*PERCFG = 0x00;                   //Î»ÖÃ1 P0¿Ú
+     39              P0SEL = 0x3C;                    //P0ÓÃ×÷´®¿Ú
+     40              
+     41              P2DIR &= ~0xC0;                  //P0ÓÅÏÈ×÷ÎªUART0    
+     42              U0CSR |= 0x80;                   //´®¿ÚÉèÖÃÎªUART·½Ê½
+     43              U0GCR |= 11;				
+     44              U0BAUD |= 216;                   //²¨ÌØÂÊÉèÎª115200
+     45              
+     46              UTX0IF = 1;                      //UART0 TXÖÐ¶Ï±êÖ¾³õÊ¼ÖÃÎ»1  
+     47              U0CSR |= 0x40;                   //ÔÊÐí½ÓÊÕ
+     48              IEN0 |= 0x84;                    //¿ª×ÜÖÐ¶Ï£¬½ÓÊÕÖÐ¶Ï*/
+     49              
+     50              //**PERCFG &= 0xfe;           //ÍâÉè¿ØÖÆ¼Ä´æÆ÷ USART 0µÄIOÎ»ÖÃ:0ÎªP0¿ÚÎ»ÖÃ1 
+     51              PERCFG =0xbe;//¶¨Ê±Æ÷1±¸ÓÃÎ»ÖÃ1£¬¶¨Ê±Æ÷1±¸ÓÃÎ»ÖÃ1,UART0±¸ÓÃÎ»ÖÃ1
+     52              P0SEL |= 0x0c;            //P0_2,P0_3ÓÃ×÷´®¿Ú£¨ÍâÉè¹¦ÄÜ£©
+     53              P2DIR &= ~0xC0;          //P0ÓÅÏÈ×÷ÎªUART0
+     54              
+     55              U0CSR |= 0x80;           //ÉèÖÃÎªUART·½Ê½
+     56              U0GCR |= 11;				       
+     57              U0BAUD |= 216;           //²¨ÌØÂÊÉèÎª115200
+     58              UTX0IF = 0;              //UART0 TXÖÐ¶Ï±êÖ¾³õÊ¼ÖÃÎ»0
+     59              U0CSR |= 0x40;           //ÔÊÐí½ÓÊÕ 
+     60              IEN0 |= 0x84;            //¿ª×ÜÖÐ¶ÏÔÊÐí½ÓÊÕÖÐ¶Ï 
+     61          }
+     62          
+     63          void Init_capture_Gpio()
+                      ^
+Error[Pa045]: function "Init_capture_Gpio" has no prototype
+     64          {
+     65            P0SEL |= (1<<4);//P0_4¸´ÓÃ¹¦ÄÜ
+     66            P0DIR &=~(1<<4);//ÉèÖÃGPIOÎªÊäÈë
+     67           // P0_4=0;
+     68            //P2INP |=0x20;//P0¶Ë¿ÚÈ«²¿Òý½ÅÏÂÀ­
+     69           // P0INP=0xff;//P0¶Ë¿ÚÈ«²¿Òý½ÅÈýÌ¬
+     70            //**  PERCFG &=0xbf;//¶¨Ê±Æ÷1±¸ÓÃÎ»ÖÃ1
+     71            PERCFG =0xbe;//¶¨Ê±Æ÷1±¸ÓÃÎ»ÖÃ1,UART0±¸ÓÃÎ»ÖÃ1
+     72            //P2DIR |=0xc0;//¶¨Ê±Æ÷1Í¨µÀ2ÓÅÏÈ  *****
+     73            P2DIR &= ~0xC0;          //P0ÓÅÏÈ×÷ÎªUART0  ****
+     74          }
+     75          
+     76          void T1_init3()//ÅäÖÃ¶¨Ê±Æ÷1ÎªËùÓÐÑØ´¥·¢
+                      ^
+Error[Pa045]: function "T1_init3" has no prototype
+     77          {
+     78          //  T1CTL=0x0d;
+     79            T1CCTL2 = 0x43;//¿ªÖÐ¶Ï£¬²¢ÉèÖÃËùÓÐÑØ²¶»ñ
+     80            //T1CCTL2 = 0x41;//¿ªÖÐ¶Ï£¬²¢ÉèÖÃÉÏÉý²¶»ñ
+     81           // PICTL &=0xfe;//P0_0-P0_7ÉÏÉýÑØ´¥·¢
+     82           // PICTL=0xfe;//P0_0-P0_7ÉÏÉýÑØ´¥·¢
+     83           // PICTL |=0x01;//P0_0-P0_7ÏÂ½µÑØ´¥·¢
+     84            IRCON=0;//Çå³ýÖÐ¶Ï±êÖ¾
+     85            P0IFG =0x00;//Çå³ýÖÐ¶Ï±êÖ¾
+     86          
+     87            T1IE=1;//Ê¹ÄÜ¶¨Ê±Æ÷1ÖÐ¶Ï  
+     88            EA=1;
+     89          }
+     90          
+     91          void T1_Capture_r_f_init()
+                      ^
+Error[Pa045]: function "T1_Capture_r_f_init" has no prototype
+     92          {
+     93            Init_capture_Gpio();
+                   ^
+Error[Pa045]: function "Init_capture_Gpio" has no prototype
+     94            T1_init3();
+                   ^
+Error[Pa045]: function "T1_init3" has no prototype
+     95          }
+     96          
+     97          
+     98          void PM2_5Init()
+     99          { 
+    100           // InitClock(); //Ê±ÖÓÖ÷ÆµÂÊÉèÖÃÎª32M
+    101            //InitUART();//³õÊ¼»¯´®¿Ú£¬ÓÃÒÔ·¢ËÍÊý¾Ý
+    102            CLKCONCMD |= (1<<3);          // OKC£º¶¨Ê±Æ÷1ÆµÂÊÎª16MHZ
+    103            CLKCONCMD &= ~(3<<4);
+    104            T1_Capture_r_f_init();//ËùÓÐÑØ´¥·¢
+                   ^
+Error[Pa045]: function "T1_Capture_r_f_init" has no prototype
+    105            IP1 |= (1<<1);              // ÉèÖÃ¶¨Ê±Æ÷1ÎªµÚ¶þ¸ßÖÐ¶ÏÓÅÏÈ¼¶
+    106            IP0 |= (1<<1);
+    107            IP1 |= (1<<3);              // ÉèÖÃ¶¨Ê±Æ÷3ÎªµÚÒ»¸ßÖÐ¶ÏÓÅÏÈ¼¶
+    108            IP0 |= (1<<3);
+    109            //while(1);
+    110          }
+    111          
+    112          
+    113          
+    114          #pragma vector = T1_VECTOR 
+    115          __interrupt void T1_ISR(void)
+                                  ^
+Error[Pa045]: function "T1_ISR" has no prototype
+    116          {
+    117            EA=0;
+    118            T1IF=0;
+    119            if(T1STAT & (1<<2))//Í¨µÀ2ÖÐ¶Ï±êÖ¾
+    120            {
+    121              if(P0_4==1)
+    122              {
+    123                //EA=0;
+    124               //** LED1=0;
+    125              //  T1IF=0;
+    126                T1STAT=0;
+    127                P0IFG =0x00;//Çå³ýÖÐ¶Ï±êÖ¾
+    128               // EA=1;
+    129               // InitUART();
+    130              //**  UartSendString(start,5);
+    131                count=0;
+    132                T3init();//Æô¶¯¶¨Ê±Æ÷3¼ÆÊ±
+                       ^
+Error[Pa045]: function "T3init" has no prototype
+    133              //  T4_int();
+    134               //*** T1_Capture_fall_init();
+    135              }
+    136              if(P0_4==0)
+    137              {
+    138                
+    139              //  EA=0;
+    140              //  LED1=1;
+    141              //  T1IF=0;
+    142                T1STAT=0;
+    143                P0IFG =0x00;//Çå³ýÖÐ¶Ï±êÖ¾
+    144               // memset(PM_data, 0, 6);
+    145                count = count*2.048;
+    146                count=(count-2)/2;//µÃµ½PM2.5µÄÖµ  ´ÖÂÔÄâºÏ
+    147               // count=0-0.0003*count*count+1.331*count-13.19;//ÄâºÏº¯Êý
+    148                countsum = count + countsum;
+    149                i++;
+    150                if(i==5)
+    151                {
+    152                  i=0;
+    153                  count_aver=countsum/5;
+    154                  sprintf(PM_data,"%.2f", count);//½«¸¡µãÊý×ª³É×Ö·û´®
+                                 ^
+Warning[Pe167]: argument of type "uint8 *" is incompatible with parameter of
+          type "char *"
+    155                 //** SampleApp_Send_P2P_Message();
+    156                  countsum=0;
+    157                  count_aver=0;
+    158                }
+    159                T3CTL |=0x04;//Çå³ý¶¨Ê±Æ÷3µÄ¼ÆÊýÆ÷
+    160                count=0;
+    161              }
+    162            }
+    163            EA=1;
+    164            T1STAT &= ~0x3f;             // Çå¿Õ¶¨Ê±Æ÷ÖÐ¶Ï×´Ì¬Î»
+    165          }
+    166          
+    167          
+    168          //¶¨Ê±Æ÷T3ÖÐ¶Ï´¦Àíº¯Êý
+    169          #pragma vector = T3_VECTOR 
+    170          __interrupt void T3_ISR(void) 
+                                  ^
+Error[Pa045]: function "T3_ISR" has no prototype
+    171          { 
+    172              T3IF = 0;            //ÇåÖÐ¶Ï±êÖ¾, Ò²¿ÉÓÉÓ²¼þ×Ô¶¯Íê³É 
+    173              count++;
+    174          }
+
+Errors: 10
+Warnings: 1

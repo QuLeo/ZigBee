@@ -1,0 +1,365 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                            /
+// IAR C/C++ Compiler V8.10.1.40194/W32 for 8051        04/Nov/2017  09:08:29 /
+// Copyright 2004-2011 IAR Systems AB.                                        /
+//                                                                            /
+//    Core               =  plain                                             /
+//    Code model         =  banked                                            /
+//    Data model         =  large                                             /
+//    Calling convention =  xdata reentrant                                   /
+//    Constant location  =  data_rom                                          /
+//    Dptr setup         =  1,16                                              /
+//    Source file        =  C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\Source\TGS822.c      /
+//    Command line       =  -f C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \Tools\CC2530DB\f8wCoord.cfg (-DCPU32MHZ          /
+//                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TR /
+//                          UE -DMAC_CFG_TX_DATA_MAX=5 -DMAC_CFG_TX_MAX=8     /
+//                          -DMAC_CFG_RX_MAX=5 -DZDO_COORDINATOR -DRTR_NWK)   /
+//                          -f C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \Tools\CC2530DB\f8wConfig.cfg (-DZIGBEEPRO        /
+//                          -DSECURE=0 -DZG_SECURE_DYNAMIC=0 -DREFLECTOR      /
+//                          -DDEFAULT_CHANLIST=0x00000800                     /
+//                          -DZDAPP_CONFIG_PAN_ID=0xFF00                      /
+//                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_M /
+//                          ASK=0x007F -DBEACON_REQUEST_DELAY=100             /
+//                          -DBEACON_REQ_DELAY_MASK=0x00FF                    /
+//                          -DLINK_STATUS_JITTER_MASK=0x007F                  /
+//                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_P /
+//                          OLLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7           /
+//                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3   /
+//                          -DNWK_MAX_DATA_RETRIES=2                          /
+//                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9        /
+//                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40          /
+//                          -DNWK_MAX_BINDING_ENTRIES=4                       /
+//                          -DMAX_BINDING_CLUSTER_IDS=4                       /
+//                          "-DDEFAULT_KEY={0x01, 0x03, 0x05, 0x07, 0x09,     /
+//                          0x0B, 0x0D, 0x0F, 0x00, 0x02, 0x04, 0x06, 0x08,   /
+//                          0x0A, 0x0C, 0x0D}" -DMAC_MAX_FRAME_SIZE=116       /
+//                          -DZDNWKMGR_MIN_TRANSMISSIONS=20 "-DCONST=const    /
+//                          __code" -DGENERIC=__generic                       /
+//                          -DRFD_RCVC_ALWAYS_ON=FALSE -DPOLL_RATE=1000       /
+//                          -DQUEUED_POLL_RATE=100 -DRESPONSE_POLL_RATE=100)  /
+//                          -DREJOIN_POLL_RATE=440 C:\Users\77564\Desktop\TEN /
+//                          Z组播+PM25+CO+HCL\Projects\zstack\Samples\SampleA /
+//                          pp\Source\TGS822.c -D BUILD_ALL_DEVICES -D        /
+//                          HOLD_AUTO_START -D LCD_SUPPORTED -D               /
+//                          HAL_UART=FALSE -D ZTOOL_P1 -lC                    /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\DemoEB\List /
+//                          \ -lA C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL /
+//                          \Projects\zstack\Samples\SampleApp\CC2530DB\DemoE /
+//                          B\List\ --diag_suppress Pe001,Pa010 -o            /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\DemoEB\Obj\ /
+//                           -e --no_code_motion --debug --core=plain         /
+//                          --dptr=16,1 --data_model=large                    /
+//                          --code_model=banked --calling_convention=xdata_re /
+//                          entrant --place_constants=data_rom                /
+//                          --nr_virtual_regs 16 -I                           /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\ -I         /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\Source\  /
+//                          -I C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \ZMain\TI2530DB\ -I C:\Users\77564\Desktop\TENZ组 /
+//                          播+PM25+CO+HCL\Projects\zstack\Samples\SampleApp\ /
+//                          CC2530DB\..\..\..\..\..\Components\hal\include\   /
+//                          -I C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\hal\target\CC2530EB\ -I         /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\mac\include\ -I                    /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\mac\high_level\ -I                 /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\mac\low_level\srf04\ -I            /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\mac\low_level\srf04\single_chip\   /
+//                          -I C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Pr /
+//                          ojects\zstack\Samples\SampleApp\CC2530DB\..\..\.. /
+//                          \..\..\Components\mt\ -I                          /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\osal\include\ -I                   /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\services\saddr\ -I                 /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\services\sdata\ -I                 /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\af\ -I                       /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\nwk\ -I                      /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\sapi\ -I                     /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\sec\ -I                      /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\sys\ -I                      /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\stack\zdo\ -I                      /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\zmac\ -I                           /
+//                          C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\..\..\..\.. /
+//                          \..\Components\zmac\f8w\ -Ohz                     /
+//                          --require_prototypes                              /
+//    List file          =  C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Proje /
+//                          cts\zstack\Samples\SampleApp\CC2530DB\DemoEB\List /
+//                          \TGS822.s51                                       /
+//                                                                            /
+//                                                                            /
+///////////////////////////////////////////////////////////////////////////////
+
+        NAME TGS822
+
+        RTMODEL "__SystemLibrary", "CLib"
+        RTMODEL "__calling_convention", "xdata_reentrant"
+        RTMODEL "__code_model", "banked"
+        RTMODEL "__core", "plain"
+        RTMODEL "__data_model", "large"
+        RTMODEL "__dptr_size", "16"
+        RTMODEL "__extended_stack", "disabled"
+        RTMODEL "__location_for_constants", "data"
+        RTMODEL "__number_of_dptrs", "1"
+        RTMODEL "__rt_version", "1"
+
+        RSEG DOVERLAY:DATA:NOROOT(0)
+        RSEG IOVERLAY:IDATA:NOROOT(0)
+        RSEG ISTACK:IDATA:NOROOT(0)
+        RSEG PSTACK:XDATA:NOROOT(0)
+        RSEG XSTACK:XDATA:NOROOT(0)
+
+
+        END
+// C:\Users\77564\Desktop\TENZ组播+PM25+CO+HCL\Projects\zstack\Samples\SampleApp\Source\TGS822.c
+//    1 /**************************************
+//    2 * 网孔法 区间直线法
+//    3 * 获取TGS系列传感器的数据
+//    4 **************************************/
+//    5 #include "TGS822.h"
+//    6 
+//    7 #if (defined Channel_0_For_TGS822) || (defined Channel_1_For_TGS822)   //必须宏定义了TGS822的通道才编译下面的程序
+//    8 
+//    9 //记录figure2中温湿度数据
+//   10 int TGS822GasSen_T[]={-10,0,10,20,30,40};
+//   11 char TGS822GasSen_R[]={35,50,65,100};
+//   12 unsigned char TGS822GasSen_Flag=0;
+//   13 //Methane 甲烷在figure1中的交点坐标
+//   14 float TGS822Fig1Data[][2]=
+//   15 {
+//   16 	{50,2.84f},
+//   17 	{60,2.64f},
+//   18 	{70,2.39f},
+//   19 	{80,2.22f},
+//   20 	{90,2.05f},
+//   21 	{93,2.0f},
+//   22 	{100,1.94f},
+//   23 	{200,1.35f},
+//   24 	{300,1.0f},
+//   25 	{400,0.9f},
+//   26 	{458,0.8f},
+//   27 	{500,0.74f},
+//   28 	{530,0.7f},
+//   29 	{600,0.64f},
+//   30 	{671,0.6f},
+//   31 	{700,0.59f},
+//   32 	{800,0.53f},
+//   33 	{867,0.5f},
+//   34 	{900,0.49f},
+//   35 	{1000,0.46f},
+//   36 	{1290,0.4f},
+//   37 	{1896,0.3f},
+//   38 	{2000,0.29f},
+//   39 	{3000,0.22f},
+//   40 	{3309,0.2f},
+//   41 	{4000,0.18f},
+//   42 	{5000,0.16f},
+//   43 };
+//   44 
+//   45 float TGS822Fig2Data[TGS822GasSen_R_Leghth][TGS822GasSen_T_Leghth][2]=
+//   46 {
+//   47 	//35% RH
+//   48 	{
+//   49 		{-10,1.69f},{0,1.69f},{10,1.69f},{20,1.34f},{30,1.09f},{40,0.88f},
+//   50 	},
+//   51 	//50% RH
+//   52 	{
+//   53 		{-10,1.53f},{0,1.53f},{10,1.53f},{20,1.17f},{30,0.92f},{40,0.76f},
+//   54 	},
+//   55 
+//   56 	//65% RH
+//   57 	{
+//   58 		{-10,1.81f},{0,1.81f},{10,1.38f},{20,1.01f},{30,0.83f},{40,0.68f},
+//   59 	},
+//   60 	//100% RH
+//   61 	{
+//   62 		{-10,2.28f},{0,1.59f},{10,1.1f},{20,0.87f},{30,0.72f},{40,0.61f},
+//   63 	},
+//   64 };
+//   65 //参数：RL电阻上的电压值 DHT11温湿度
+//   66 //返还：浓度值，50-5000ppm之间
+//   67 //注意：TGS822只能测量50-5000ppm浓度的酒精
+//   68 //	当浓度高于5000ppmm,TGS822GasSen_Flag的位0被置1;
+//   69 //	当浓度低于50ppm,TGS822GasSen_Flag的位1被置1;
+//   70 int TGS822GetConcentration(float RL_Vol,char DHT11_T,unsigned char DHT11_R)
+//   71 {
+//   72 	float Rs=0;				
+//   73 	float RsR0_Ratio1=0;							//Rs与R0的比率1,比率1用于最终计算浓度结果
+//   74 	int concentration=0;							//最后的浓度值
+//   75 	char i=0;                                                               //循环用到
+//   76 
+//   77         TGS822GasSen_Flag = 0;                                                  //清空标志位
+//   78 	
+//   79 	RL_Vol += (float)TGS822GasSen_Wire_Compensation;			//补偿线路的压降
+//   80 	Rs = ((TGS822GasSen_Vc/RL_Vol)-1)*TGS822GasSen_RL;			//得出Rs的值
+//   81 	RsR0_Ratio1 = Rs / TGS822GetCookedRo(DHT11_T,DHT11_R);		        //得到比率1,比率1是通过Rs与补偿后的R0的比值获得的。
+//   82 
+//   83 //	printf("Rs:%f\n",Rs);							//输出Rs
+//   84 //	printf("Ratio:%f\n",RsR0_Ratio1);					//输出比率
+//   85 //	RsR0_Ratio1 = 0.18;						        //软件设定比率，为了测试
+//   86 
+//   87 	//判断比率，要求比率对应的浓度值在传感器测量的范围里，若不在，置位标志位
+//   88 	if(RsR0_Ratio1 > TGS822Fig1Data[0][1])
+//   89 	{
+//   90 		//目标气体在0-500ppm之间，不在测试范围返还0
+//   91 		TGS822GasSen_Flag |= (1<<0);
+//   92 		return 0;
+//   93 	}
+//   94 	else if(RsR0_Ratio1 < TGS822Fig1Data[TGS822NumOfFig1Coor-1][1])
+//   95 	{
+//   96 		//目标气体浓度大于10000ppm，不在测试范围，返还10000
+//   97 		TGS822GasSen_Flag |= (1<<1);
+//   98 		return (int)TGS822Fig1Data[TGS822NumOfFig1Coor-1][0];
+//   99 	}
+//  100 	//循环，判断比率所在的区间，得到的i值为区间（以坐标数组形式）下标
+//  101 	for(i=0;i<TGS822NumOfFig1Coor;i++)				
+//  102 	{	
+//  103 		if((RsR0_Ratio1 <= TGS822Fig1Data[i][1]) && (RsR0_Ratio1 >TGS822Fig1Data[i+1][1]))	
+//  104 		break;
+//  105 	}
+//  106 	//获得比率对应的浓度值
+//  107 	concentration = (int)GetXFromTwoPoint(TGS822Fig1Data[i][0],TGS822Fig1Data[i][1],TGS822Fig1Data[i+1][0],TGS822Fig1Data[i+1][1],RsR0_Ratio1);	
+//  108 	return concentration;
+//  109 }
+//  110 
+//  111 
+//  112 
+//  113 //参数：从DHT11获取的温湿度数据，分辨率为1，如果使用更加精准的温湿度传感器，需要改变输入参数的类型
+//  114 //返还：补偿后的R0值
+//  115 float TGS822GetCookedRo(char DHT11_T,unsigned char DHT11_R)
+//  116 {
+//  117 	char sub_T_Arr=0;
+//  118 	char sub_R_Arr=0;		//记录温湿度数据在温度，湿度数组中的下标（即在数组中的位置）
+//  119 	float RsR0_Ratio0=0;		//最终需要得到的结果
+//  120 	float TwoCoordinate[][2]=	//用于记录求目标数据所在直线的两个点的坐标
+//  121 	{
+//  122 		{0,0},			//靠左的点
+//  123 		{0,0},			//靠右的点
+//  124 	};
+//  125         char TEMP_ARR[20];
+//  126 
+//  127 	if(DHT11_T > TGS822GasSen_T[TGS822GasSen_T_Leghth-1])	//测得的温度值高于范围，置位标志位的位2
+//  128 	{
+//  129           DHT11_T = TGS822GasSen_TEMP_MAX;  //设置温湿度为默认值
+//  130 		TGS822GasSen_Flag |=(1<<2);
+//  131 	}
+//  132 	else if(DHT11_T < TGS822GasSen_T[0])			//测得的温度值低于范围，置位标志位的位3
+//  133 	{
+//  134           DHT11_T = (char)TGS822GasSen_TEMP_MIN;   //设置温湿度为默认值
+//  135 	  TGS822GasSen_Flag |=(1<<3);
+//  136 	}
+//  137 
+//  138 	if(DHT11_R > TGS822GasSen_R[TGS822GasSen_R_Leghth-1])	//测得的湿度值高于范围，置位标志位的位4
+//  139 	{
+//  140            DHT11_R =  TGS822GasSen_HUMI_MAX;
+//  141 	   TGS822GasSen_Flag |=(1<<4);
+//  142 	}
+//  143 	else if(DHT11_R < TGS822GasSen_R[0])			//测得的湿度值高于范围,置位标志位的位5
+//  144 	{
+//  145           DHT11_R =  TGS822GasSen_HUMI_MIN;
+//  146 	  TGS822GasSen_Flag |=(1<<5);
+//  147 	}
+//  148 
+//  149 	//循环，判断在哪个温度的区间，得到数组的下标
+//  150 	for(sub_T_Arr=0; sub_T_Arr<TGS822GasSen_T_Leghth; sub_T_Arr++)				
+//  151 	{	
+//  152 		if((DHT11_T >= TGS822GasSen_T[sub_T_Arr]) && (DHT11_T <= TGS822GasSen_T[sub_T_Arr+1]))	
+//  153 		break;
+//  154 	}
+//  155 	//循环，判断在哪个湿度的区间，得到数组的下标
+//  156 	for(sub_R_Arr=0; sub_R_Arr<TGS822GasSen_R_Leghth; sub_R_Arr++)				
+//  157 	{	
+//  158 		if((DHT11_R >= TGS822GasSen_R[sub_R_Arr]) && (DHT11_R <= TGS822GasSen_R[sub_R_Arr+1]))	
+//  159 		break;
+//  160 	}
+//  161 	
+//  162 	//计算两点坐标
+//  163 	TwoCoordinate[0][0] = TGS822Fig2Data[sub_R_Arr][sub_T_Arr][0];
+//  164 	TwoCoordinate[1][0] = TGS822Fig2Data[sub_R_Arr][sub_T_Arr+1][0];
+//  165 	TwoCoordinate[0][1] = GetYFromTwoPoint(TGS822GasSen_R[sub_R_Arr] , TGS822Fig2Data[sub_R_Arr][sub_T_Arr][1] , TGS822GasSen_R[sub_R_Arr+1] , TGS822Fig2Data[sub_R_Arr+1][sub_T_Arr][1],DHT11_R);
+//  166 	TwoCoordinate[1][1] = GetYFromTwoPoint(TGS822GasSen_R[sub_R_Arr] , TGS822Fig2Data[sub_R_Arr][sub_T_Arr+1][1] , TGS822GasSen_R[sub_R_Arr+1] , TGS822Fig2Data[sub_R_Arr+1][sub_T_Arr+1][1],DHT11_R);
+//  167 	
+//  168 	//得到结果，Rs和R0的比值
+//  169 	RsR0_Ratio0 = GetYFromTwoPoint(TwoCoordinate[0][0],TwoCoordinate[0][1],TwoCoordinate[1][0],TwoCoordinate[1][1],DHT11_T);
+//  170 
+//  171 	return RsR0_Ratio0 * TGS822GasSen_Standard_R0;
+//  172 }
+//  173 
+//  174 //对于一条通过两点确定的直线，给定一个y值，返还x值
+//  175 float GetXFromTwoPoint(float x1,float y1,float x2,float y2,float y)
+//  176 {
+//  177 	if(y1 == y2)			
+//  178 	{
+//  179 		if(x1 == x2)
+//  180 		{
+//  181 			return 0;		//如果输入的两点重合了，则返回0
+//  182 		}				
+//  183 		return y1;			//如果两点的y坐标相等，则返还y坐标
+//  184 	}
+//  185 	
+//  186 	else
+//  187 		return ((x2-x1)*(y-y1))/(y2-y1) + x1;
+//  188 }
+//  189 //对于一条通过两点确定的直线，给定一个x值，返还y值
+//  190 float GetYFromTwoPoint(float x1,float y1,float x2,float y2,float x)
+//  191 {
+//  192 	if(x1 == x2)
+//  193 	{
+//  194 		if(y1 == y2)
+//  195 		{
+//  196 			return 0;		//如果输入的两点重合了，则返回0
+//  197 		}	
+//  198 		return x1;			//如果两点的x坐标相等，则返还x坐标
+//  199 	}
+//  200 	else
+//  201 		return ((y2-y1)*(x-x1))/(x2-x1) + y1;
+//  202 }
+//  203 /* For Test in VC++
+//  204 void main()
+//  205 {
+//  206 	printf("Gas concertation:%dppm\r\n",TGS822GetConcentration(0.16129f,30,80));
+//  207 }*/
+//  208 #endif
+// 
+// 
+// 0 bytes of memory
+//
+//Errors: none
+//Warnings: none
