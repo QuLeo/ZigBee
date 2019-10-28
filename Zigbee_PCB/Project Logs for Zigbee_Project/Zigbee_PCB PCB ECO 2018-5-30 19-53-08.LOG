@@ -1,0 +1,8 @@
+Added Pin To Net: NetName=NetNET_1 Pin=NET-1
+Added Pin To Net: NetName=P1_0/NET Pin=NET-2
+Added Pin To Net: NetName=NetPA_1 Pin=PA-1
+Added Pin To Net: NetName=P1_1/PA Pin=PA-2
+Added Pin To Net: NetName=NetPWR_1 Pin=PWR-1
+Added Pin To Net: NetName=GND Pin=PWR-2
+Added Pin To Net: NetName=NetR8_1 Pin=TX-1
+Added Pin To Net: NetName=P0_3/TX Pin=TX-2

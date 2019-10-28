@@ -1,0 +1,21 @@
+Removed Pin From Net: NetName=+5V Pin=P3-1
+Removed Pin From Net: NetName=NetC12_2 Pin=P3-2
+Removed Pin From Net: NetName=P0_1/TGS813 Pin=P3-3
+Removed Pin From Net: NetName=GND Pin=P3-4
+Removed Pin From Net: NetName=P0_1/TGS813 Pin=U2-6
+Removed Pin From Net: NetName=P0_1/TGS813 Pin=U2-7
+Removed Member From Class: ClassName=U_Sensor_Borad Member=P3
+Added Component: Designator=S2(HDR1X2)
+Added Component: Designator=S3(HDR1X2)
+Added Pin To Net: NetName=NetC12_2 Pin=S2-1
+Added Pin To Net: NetName=P0_1/TGS813 Pin=S3-1
+Added Pin To Net: NetName=DOUT Pin=S2-2
+Added Net: Name=DOUT
+Added Pin To Net: NetName=NetS3_2 Pin=S3-2
+Added Pin To Net: NetName=NetS3_2 Pin=U2-6
+Added Pin To Net: NetName=NetS3_2 Pin=U2-7
+Added Net: Name=NetS3_2
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component S2 Channel0
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component S3 Channel0
+Added Room: Name=U_Sensor_Borad
+Added Room: Name=U_Zigbee_broad

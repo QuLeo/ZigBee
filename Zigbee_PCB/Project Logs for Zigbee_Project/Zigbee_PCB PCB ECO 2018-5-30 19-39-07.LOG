@@ -1,0 +1,12 @@
+Change Component DesignItemId : Designator=PWR Old DesignItemId=LED New DesignItemId=LED-直插
+Change Component DesignItemId : Designator=NET Old DesignItemId=LED SMD New DesignItemId=LED-直插
+Change Component DesignItemId : Designator=PA Old DesignItemId=LED SMD New DesignItemId=LED-直插
+Change Component DesignItemId : Designator=TX Old DesignItemId=LED SMD New DesignItemId=LED-直插
+Change Component Comment : Designator=NET Old Comment=GREEN_LED New Comment=LED-直插
+Change Component Comment : Designator=PA Old Comment=GREEN_LED New Comment=LED-直插
+Change Component Comment : Designator=TX Old Comment=GREEN_LED New Comment=LED-直插
+Change Component Comment : Designator=PWR Old Comment=LED1 New Comment=LED-直插
+Change Component Description : Designator=NET Old Description=Typical RED, GREEN, YELLOW, AMBER GaAs LED New Description=
+Change Component Description : Designator=PA Old Description=Typical RED, GREEN, YELLOW, AMBER GaAs LED New Description=
+Change Component Description : Designator=PWR Old Description=Typical RED, GREEN, YELLOW, AMBER GaAs LED New Description=
+Change Component Description : Designator=TX Old Description=Typical RED, GREEN, YELLOW, AMBER GaAs LED New Description=

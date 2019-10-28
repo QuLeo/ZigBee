@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=NetCO_s_1 Pin=CO-1
+Removed Pin From Net: NetName=P0_0/CO Pin=CO-2
+Removed Pin From Net: NetName=GND Pin=CO-4
+Removed Pin From Net: NetName=NetHCL_s_1 Pin=HCL-1
+Removed Pin From Net: NetName=P0_4/HCL Pin=HCL-2
+Removed Pin From Net: NetName=GND Pin=HCL-4
+Removed Member From Class: ClassName=U_Sensor_Borad Member=CO
+Removed Member From Class: ClassName=U_Sensor_Borad Member=HCL
+Change Component Designator: OldDesignator=DHT21 NewDesignator=P4
+Change Component Designator: OldDesignator=MQ3 NewDesignator=P6
+Added Component: Designator=P5(hcl)
+Added Component: Designator=P7(hcl)
+Added Pin To Net: NetName=NetCO_s_1 Pin=P5-1
+Added Pin To Net: NetName=P0_0/CO Pin=P5-1
+Added Pin To Net: NetName=GND Pin=P5-2
+Added Pin To Net: NetName=NetHCL_s_1 Pin=P7-1
+Added Pin To Net: NetName=P0_4/HCL Pin=P7-1
+Added Pin To Net: NetName=GND Pin=P7-2
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component P5 HCL
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component P7 HCL

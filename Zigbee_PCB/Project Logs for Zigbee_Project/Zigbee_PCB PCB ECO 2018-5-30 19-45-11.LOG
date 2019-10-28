@@ -1,0 +1,66 @@
+Change Component Footprint: Designator=C1 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=C2 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=C3 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=C4 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=C6 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=C7 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=C9 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=C10 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=C11 Old Footprint=CAP5X5_4 New Footprint=0603
+Change Component Footprint: Designator=Battery Old Footprint=CR1220 - 1 New Footprint=DC
+Change Component Footprint: Designator=Fuse1 Old Footprint=RES0805 New Footprint=1812
+Change Component Comment : Designator=Y1 Old Comment=8MHz New Comment=12M
+Change Component Comment : Designator=C1 Old Comment=220uF New Comment=20P
+Change Component Comment : Designator=C2 Old Comment=220uF New Comment=20P
+Change Component Comment : Designator=C3 Old Comment=220uF New Comment=104
+Change Component Comment : Designator=C4 Old Comment=220uF New Comment=104
+Change Component Comment : Designator=C6 Old Comment=220uF New Comment=104
+Change Component Comment : Designator=C7 Old Comment=220uF New Comment=104
+Change Component Comment : Designator=C9 Old Comment=220uF New Comment=104
+Change Component Comment : Designator=C10 Old Comment=220uF New Comment=104
+Change Component Comment : Designator=C11 Old Comment=220uF New Comment=104
+Change Component Comment : Designator=1 Old Comment=AMS1117-3.3 New Comment=AMS1117-5.0
+Change Component Comment : Designator=D2 Old Comment=DIODE SCHOTTKY New Comment=IN4007
+Change Component Comment : Designator=D1 Old Comment=DIODE SCHOTTKY New Comment=IN5819
+Change Component Comment : Designator=Fuse1 Old Comment=FUSH New Comment=1100mA
+Change Component Comment : Designator=P2 Old Comment=Header 3 New Comment=IO
+Change Component Comment : Designator=L_1 Old Comment=Header 6X2 New Comment=Left
+Change Component Comment : Designator=L_2 Old Comment=Header 6X2 New Comment=Left
+Change Component Comment : Designator=R_1 Old Comment=Header 6X2 New Comment=Right
+Change Component Comment : Designator=R_2 Old Comment=Header 6X2 New Comment=Right
+Change Component Comment : Designator=J2 Old Comment=JNU logo New Comment=JNU LOGO-2
+Change Component Comment : Designator=R3 Old Comment=Resistor New Comment=27
+Change Component Comment : Designator=R5 Old Comment=Resistor New Comment=27
+Change Component Comment : Designator=R2 Old Comment=Resistor New Comment=103
+Change Component Comment : Designator=R4 Old Comment=Resistor New Comment=103
+Change Component Comment : Designator=R7 Old Comment=Resistor New Comment=103
+Change Component Comment : Designator=R10 Old Comment=Resistor New Comment=104
+Change Component Comment : Designator=R6 Old Comment=Resistor New Comment=152
+Change Component Comment : Designator=R1 Old Comment=Resistor New Comment=391
+Change Component Comment : Designator=R8 Old Comment=Resistor New Comment=391
+Change Component Comment : Designator=R9 Old Comment=Resistor New Comment=391
+Change Component Comment : Designator=R11 Old Comment=Resistor New Comment=391
+Change Component Description : Designator=1 Old Description= New Description=3.3V 5V: ‰»Î6.5V-12V
+Change Component Description : Designator=2 Old Description= New Description=3.3V 5V: ‰»Î6.5V-12V
+Added Pin To Net: NetName=GND Pin=C1-1
+Added Pin To Net: NetName=GND Pin=C2-1
+Added Pin To Net: NetName=+3.3V Pin=C3-1
+Added Pin To Net: NetName=GND Pin=C3-2
+Added Pin To Net: NetName=GND Pin=C4-1
+Added Pin To Net: NetName=Net1_3 Pin=C4-2
+Added Pin To Net: NetName=+5V Pin=C6-2
+Added Pin To Net: NetName=USB_5V Pin=C7-1
+Added Pin To Net: NetName=GND Pin=C7-2
+Added Pin To Net: NetName=+3.3V Pin=C9-2
+Added Pin To Net: NetName=GND Pin=C10-1
+Added Pin To Net: NetName=+3.3V Pin=C10-2
+Added Pin To Net: NetName=GND Pin=C11-1
+Added Pin To Net: NetName=RESET Pin=C11-2
+Added Pin To Net: NetName=NetC1_2 Pin=C1-2
+Added Pin To Net: NetName=NetC1_2 Pin=U1-28
+Added Pin To Net: NetName=NetC1_2 Pin=Y1-2
+Added Net: Name=NetC1_2
+Added Pin To Net: NetName=NetC2_2 Pin=C2-2
+Added Pin To Net: NetName=NetC2_2 Pin=U1-27
+Added Pin To Net: NetName=NetC2_2 Pin=Y1-1
+Added Net: Name=NetC2_2

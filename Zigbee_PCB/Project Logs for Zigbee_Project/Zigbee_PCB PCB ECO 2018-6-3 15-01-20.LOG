@@ -1,0 +1,57 @@
+Removed Pin From Net: NetName=+5V Pin=CO-1
+Removed Pin From Net: NetName=P0_0/CO Pin=CO_s-2
+Removed Pin From Net: NetName=+5V Pin=DHT21-1
+Removed Pin From Net: NetName=P0_7/DHT21 Pin=DHT21_s-2
+Removed Pin From Net: NetName=+5V Pin=HCL-1
+Removed Pin From Net: NetName=P0_4/HCL Pin=HCL_s-2
+Removed Pin From Net: NetName=+5V Pin=MQ3-1
+Removed Pin From Net: NetName=P0_5/MQ3_A0 Pin=MQ3_A-1
+Removed Pin From Net: NetName=P0_6/MQ3_B0 Pin=MQ3_D-2
+Removed Pin From Net: NetName=+5V Pin=R14-1
+Removed Pin From Net: NetName=RESET Pin=RESET-3
+Removed Pin From Net: NetName=GND Pin=RESET-4
+Removed Pin From Net: NetName=+5V Pin=TGS813-1
+Removed Pin From Net: NetName=+5V Pin=TGS813-2
+Removed Pin From Net: NetName=+5V Pin=TGS813-3
+Removed Pin From Net: NetName=P0_1/TGS813 Pin=TGS813_A-1
+Removed Pin From Net: NetName=NetC12_2 Pin=TGS813_D-1
+Removed Member From Class: ClassName=U_Sensor_Borad Member=MQ3_D
+Removed Member From Class: ClassName=U_Sensor_Borad Member=TGS813_D
+Change Component Designator: OldDesignator=CO NewDesignator=P5
+Change Component Designator: OldDesignator=DHT21 NewDesignator=P4
+Change Component Designator: OldDesignator=HCL NewDesignator=P7
+Change Component Designator: OldDesignator=MQ3 NewDesignator=P6
+Change Component Designator: OldDesignator=MQ3_A NewDesignator=MQ3_s
+Change Component Designator: OldDesignator=TGS813_A NewDesignator=TGS813_s
+Added Pin To Net: NetName=+5V Pin=CO_s-2
+Added Pin To Net: NetName=+5V Pin=DHT21_s-2
+Added Pin To Net: NetName=+5V Pin=HCL_s-2
+Added Pin To Net: NetName=+5V Pin=MQ3_s-2
+Added Pin To Net: NetName=P0_7/DHT21 Pin=P4-2
+Added Pin To Net: NetName=P0_0/CO Pin=P5-2
+Added Pin To Net: NetName=P0_6/MQ3_B0 Pin=P6-3
+Added Pin To Net: NetName=P0_5/MQ3_A0 Pin=P6-4
+Added Pin To Net: NetName=P0_4/HCL Pin=P7-2
+Added Pin To Net: NetName=P0_7/DHT21 Pin=R14-2
+Added Pin To Net: NetName=+5V Pin=TGS813_s-2
+Added Pin To Net: NetName=P0_1/TGS813 Pin=U2-6
+Added Pin To Net: NetName=P0_1/TGS813 Pin=U2-7
+Change Net Name : Old Net Name=NetC12_2 New Net Name=DOUT
+Added Pin To Net: NetName=NetCO_s_1 Pin=CO_s-1
+Added Pin To Net: NetName=NetCO_s_1 Pin=P5-1
+Added Net: Name=NetCO_s_1
+Added Pin To Net: NetName=NetDHT21_s_1 Pin=DHT21_s-1
+Added Pin To Net: NetName=NetDHT21_s_1 Pin=P4-1
+Added Pin To Net: NetName=NetDHT21_s_1 Pin=R14-1
+Added Net: Name=NetDHT21_s_1
+Added Pin To Net: NetName=NetHCL_s_1 Pin=HCL_s-1
+Added Pin To Net: NetName=NetHCL_s_1 Pin=P7-1
+Added Net: Name=NetHCL_s_1
+Added Pin To Net: NetName=NetMQ3_s_1 Pin=MQ3_s-1
+Added Pin To Net: NetName=NetMQ3_s_1 Pin=P6-1
+Added Net: Name=NetMQ3_s_1
+Added Pin To Net: NetName=NetTGS813_1 Pin=TGS813-1
+Added Pin To Net: NetName=NetTGS813_1 Pin=TGS813-2
+Added Pin To Net: NetName=NetTGS813_1 Pin=TGS813-3
+Added Pin To Net: NetName=NetTGS813_1 Pin=TGS813_s-1
+Added Net: Name=NetTGS813_1

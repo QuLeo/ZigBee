@@ -1,0 +1,508 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body { 
+			font-family : verdana;
+		}
+		td, th {  
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;	
+		}
+		th { 
+			background-color : #A6CAF0;
+		
+		}
+		th.column1, td.column1 { 
+			text-align: left;
+			width : auto; 
+		}
+		table { 
+			width : 100%; 
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3 {
+			padding-top : 0.1em;
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top
+		}
+		.front_matter_column1 {
+			text-align : right;
+		}
+		.total_column1, .total_column {
+			font-weight : bold;	
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.front_matter_column2 {
+			text-align : center;
+		}
+		.front_matter_column3 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow 
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Net Status Report</title>
+</head>
+<body onload="document.getElementById('radio_mm').click()"><img ALT="Altium" src="
+			file://D:\Users\Public\Documents\Altium\AD14\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Net Status Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2018/6/3</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">14:40:43</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc" class="file"><acronym title="E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc">E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc</acronym></a></td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Units</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">
+<form><input type="radio" name="radio_units" id="radio_mm" onclick="changeUnits(this, 'mm')">mm<input type="radio" name="radio_units" id="radio_mil" onclick="changeUnits(this, 'mil')">mils</form>
+</td>
+</tr>
+</table>
+<hr><a name="ID4MKB2GVEDXCDIF2OJBTMLHLBCIFKUQCOW01FGOB1TP0B0TXDALYM"><table>
+<tr>
+<th class="column1">Nets</th>
+<th class="column2">Layer</th>
+<th class="column3">Length</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4620.917mil|Location2.X=6087.698mil|Location1.Y=3495.765mil|Location2.Y=6030mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4620.917mil|Location2.X=6087.698mil|Location1.Y=3495.765mil|Location2.Y=6030mil|Absolute=True">+3.3V</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="86581602">219.9173mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.619mil|Location2.X=5856.323mil|Location1.Y=3581.482mil|Location2.Y=6062.915mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2150.619mil|Location2.X=5856.323mil|Location1.Y=3581.482mil|Location2.Y=6062.915mil|Absolute=True">+5V</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="106515747">270.55mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">DOUT</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="0">0mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2270.918mil|Location2.X=6387.35mil|Location1.Y=3080.765mil|Location2.Y=6235.332mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2270.918mil|Location2.X=6387.35mil|Location1.Y=3080.765mil|Location2.Y=6235.332mil|Absolute=True">GND</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="204012510">518.1918mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5353.677mil|Location2.X=6474.539mil|Location1.Y=3581.982mil|Location2.Y=6039.095mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5353.677mil|Location2.X=6474.539mil|Location1.Y=3581.982mil|Location2.Y=6039.095mil|Absolute=True">Net5.0V_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="41124288">104.4557mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5853.634mil|Location2.X=6113.146mil|Location1.Y=3129.482mil|Location2.Y=4084.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5853.634mil|Location2.X=6113.146mil|Location1.Y=3129.482mil|Location2.Y=4084.686mil|Absolute=True">NetBattery_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8835344">22.4418mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2981.095mil|Location2.X=3600.905mil|Location1.Y=5490.766mil|Location2.Y=6185.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2981.095mil|Location2.X=3600.905mil|Location1.Y=5490.766mil|Location2.Y=6185.905mil|Absolute=True">NetC12_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="22013871">55.9152mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4979.461mil|Location2.X=5440.154mil|Location1.Y=5229.309mil|Location2.Y=5414.805mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4979.461mil|Location2.X=5440.154mil|Location1.Y=5229.309mil|Location2.Y=5414.805mil|Absolute=True">NetC1_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5011156">12.7283mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4964.095mil|Location2.X=5465.744mil|Location1.Y=5029.309mil|Location2.Y=5430.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4964.095mil|Location2.X=5465.744mil|Location1.Y=5029.309mil|Location2.Y=5430.905mil|Absolute=True">NetC2_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="10476243">26.6097mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2270.918mil|Location2.X=4377.905mil|Location1.Y=4645.766mil|Location2.Y=5981.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2270.918mil|Location2.X=4377.905mil|Location1.Y=4645.766mil|Location2.Y=5981.199mil|Absolute=True">NetCO_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="29618337">75.2306mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5883.634mil|Location2.X=6207.319mil|Location1.Y=3817.278mil|Location2.Y=6087.482mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5883.634mil|Location2.X=6207.319mil|Location1.Y=3817.278mil|Location2.Y=6087.482mil|Absolute=True">NetD1_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="24481859">62.1839mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6019.673mil|Location2.X=6157.595mil|Location1.Y=4382.278mil|Location2.Y=4595.239mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6019.673mil|Location2.X=6157.595mil|Location1.Y=4382.278mil|Location2.Y=4595.239mil|Absolute=True">NetD1_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1333161">3.3862mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3492.134mil|Location2.X=3585.161mil|Location1.Y=5879.418mil|Location2.Y=6072.546mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3492.134mil|Location2.X=3585.161mil|Location1.Y=5879.418mil|Location2.Y=6072.546mil|Absolute=True">NetD4_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1627188">4.1331mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3597.729mil|Location2.X=4366.35mil|Location1.Y=3526.982mil|Location2.Y=5256.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3597.729mil|Location2.X=4366.35mil|Location1.Y=3526.982mil|Location2.Y=5256.199mil|Absolute=True">NetDHT21_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="24514488">62.2668mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6019.673mil|Location2.X=6454.539mil|Location1.Y=3636.765mil|Location2.Y=4744.845mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6019.673mil|Location2.X=6454.539mil|Location1.Y=3636.765mil|Location2.Y=4744.845mil|Absolute=True">NetFuse1_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="12910530">32.7927mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.095mil|Location2.X=4377.905mil|Location1.Y=3630.765mil|Location2.Y=5799.949mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2269.095mil|Location2.X=4377.905mil|Location1.Y=3630.765mil|Location2.Y=5799.949mil|Absolute=True">NetHCL_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="33287760">84.5509mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3670.918mil|Location2.X=4366.35mil|Location1.Y=4750.766mil|Location2.Y=5437.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3670.918mil|Location2.X=4366.35mil|Location1.Y=4750.766mil|Location2.Y=5437.449mil|Absolute=True">NetMQ3_A_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="8908190">22.6268mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3670.918mil|Location2.X=4477.905mil|Location1.Y=4650.766mil|Location2.Y=5834.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3670.918mil|Location2.X=4477.905mil|Location1.Y=4650.766mil|Location2.Y=5834.905mil|Absolute=True">NetMQ3_D_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="20942401">53.1937mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6101.634mil|Location2.X=6386.35mil|Location1.Y=4465.766mil|Location2.Y=4807.482mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6101.634mil|Location2.X=6386.35mil|Location1.Y=4465.766mil|Location2.Y=4807.482mil|Absolute=True">NetNET_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4309899">10.9471mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6101.634mil|Location2.X=6386.35mil|Location1.Y=4695.1mil|Location2.Y=4879.148mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6101.634mil|Location2.X=6386.35mil|Location1.Y=4695.1mil|Location2.Y=4879.148mil|Absolute=True">NetPA_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2807426">7.1309mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6101.634mil|Location2.X=6386.35mil|Location1.Y=4984.482mil|Location2.Y=5131.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6101.634mil|Location2.X=6386.35mil|Location1.Y=4984.482mil|Location2.Y=5131.199mil|Absolute=True">NetPWR_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2652792">6.7381mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2859.281mil|Location2.X=3045.134mil|Location1.Y=5439.546mil|Location2.Y=5695.569mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2859.281mil|Location2.X=3045.134mil|Location1.Y=5439.546mil|Location2.Y=5695.569mil|Absolute=True">NetR15_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2609744">6.6287mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2698.286mil|Location2.X=3372.557mil|Location1.Y=5213.866mil|Location2.Y=6023.1mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2698.286mil|Location2.X=3372.557mil|Location1.Y=5213.866mil|Location2.Y=6023.1mil|Absolute=True">NetR16_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="16373205">41.5879mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5552.729mil|Location2.X=5747.24mil|Location1.Y=4943.095mil|Location2.Y=5137.245mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5552.729mil|Location2.X=5747.24mil|Location1.Y=4943.095mil|Location2.Y=5137.245mil|Absolute=True">NetR2_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="3884961">9.8678mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5834.634mil|Location2.X=6217.634mil|Location1.Y=5281.482mil|Location2.Y=5537.167mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5834.634mil|Location2.X=6217.634mil|Location1.Y=5281.482mil|Location2.Y=5537.167mil|Absolute=True">NetR3_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="4567811">11.6022mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5721.524mil|Location2.X=5872.57mil|Location1.Y=5226.982mil|Location2.Y=5414.805mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5721.524mil|Location2.X=5872.57mil|Location1.Y=5226.982mil|Location2.Y=5414.805mil|Absolute=True">NetR3_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2170299">5.5126mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5747.116mil|Location2.X=5804.54mil|Location1.Y=4964.482mil|Location2.Y=5137.245mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5747.116mil|Location2.X=5804.54mil|Location1.Y=4964.482mil|Location2.Y=5137.245mil|Absolute=True">NetR4_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1467610">3.7277mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5906.216mil|Location2.X=6431.905mil|Location1.Y=5142.095mil|Location2.Y=5671.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5906.216mil|Location2.X=6431.905mil|Location1.Y=5142.095mil|Location2.Y=5671.905mil|Absolute=True">NetR5_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="14823747">37.6523mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5747.116mil|Location2.X=5944.28mil|Location1.Y=5281.982mil|Location2.Y=5414.805mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5747.116mil|Location2.X=5944.28mil|Location1.Y=5281.982mil|Location2.Y=5414.805mil|Absolute=True">NetR5_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2335306">5.9317mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6101.634mil|Location2.X=6386.35mil|Location1.Y=4912.816mil|Location2.Y=4999.864mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6101.634mil|Location2.X=6386.35mil|Location1.Y=4912.816mil|Location2.Y=4999.864mil|Absolute=True">NetR8_1</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="2405639">6.1103mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3088.095mil|Location2.X=3174.643mil|Location1.Y=5642.671mil|Location2.Y=6161.341mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3088.095mil|Location2.X=3174.643mil|Location1.Y=5642.671mil|Location2.Y=6161.341mil|Absolute=True">NetRP1_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="5140526">13.0569mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3313.376mil|Location2.X=3516.351mil|Location1.Y=5642.671mil|Location2.Y=5751.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3313.376mil|Location2.X=3516.351mil|Location1.Y=5642.671mil|Location2.Y=5751.199mil|Absolute=True">NetTGS813_A_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="1877391">4.7686mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5711.35mil|Location1.Y=3595.765mil|Location2.Y=5981.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5711.35mil|Location1.Y=3595.765mil|Location2.Y=5981.199mil|Absolute=True">P0_0/CO</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="36494027">92.6948mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.918mil|Location2.X=5722.905mil|Location1.Y=3269.095mil|Location2.Y=5751.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3540.918mil|Location2.X=5722.905mil|Location1.Y=3269.095mil|Location2.Y=5751.199mil|Absolute=True">P0_1/TGS813</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="49191944">124.9475mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5414.438mil|Location2.X=5969.685mil|Location1.Y=3484.095mil|Location2.Y=5188.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5414.438mil|Location2.X=5969.685mil|Location1.Y=3484.095mil|Location2.Y=5188.685mil|Absolute=True">P0_2/RX</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="29707582">75.4573mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5507.315mil|Location2.X=6399.905mil|Location1.Y=3495.765mil|Location2.Y=5870.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5507.315mil|Location2.X=6399.905mil|Location1.Y=3495.765mil|Location2.Y=5870.905mil|Absolute=True">P0_3/TX</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="41521626">105.4649mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5511.35mil|Location1.Y=3480.765mil|Location2.Y=5799.949mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5511.35mil|Location1.Y=3480.765mil|Location2.Y=5799.949mil|Absolute=True">P0_4/HCL</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="37141917">94.3405mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5522.905mil|Location1.Y=3380.765mil|Location2.Y=5437.449mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5522.905mil|Location1.Y=3380.765mil|Location2.Y=5437.449mil|Absolute=True">P0_5/MQ3_A0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="32326375">82.109mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5411.35mil|Location1.Y=3169.095mil|Location2.Y=5618.699mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5411.35mil|Location1.Y=3169.095mil|Location2.Y=5618.699mil|Absolute=True">P0_6/MQ3_B0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="41599526">105.6628mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5422.905mil|Location1.Y=3180.765mil|Location2.Y=5256.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4390.917mil|Location2.X=5422.905mil|Location1.Y=3180.765mil|Location2.Y=5256.199mil|Absolute=True">P0_7/DHT21</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="33939998">86.2076mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5320.917mil|Location2.X=6385.35mil|Location1.Y=4227.095mil|Location2.Y=4801.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5320.917mil|Location2.X=6385.35mil|Location1.Y=4227.095mil|Location2.Y=4801.199mil|Absolute=True">P1_0/NET</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="14495322">36.8181mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5313.78mil|Location2.X=6385.35mil|Location1.Y=4304.095mil|Location2.Y=4901.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5313.78mil|Location2.X=6385.35mil|Location1.Y=4304.095mil|Location2.Y=4901.199mil|Absolute=True">P1_1/PA</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="16207324">41.1666mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.917mil|Location2.X=5519.905mil|Location1.Y=4505.766mil|Location2.Y=5761.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.917mil|Location2.X=5519.905mil|Location1.Y=4505.766mil|Location2.Y=5761.199mil|Absolute=True">P1_2</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="15151843">38.4857mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4884.095mil|Location2.X=5501.35mil|Location1.Y=4605.766mil|Location2.Y=5861.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4884.095mil|Location2.X=5501.35mil|Location1.Y=4605.766mil|Location2.Y=5861.199mil|Absolute=True">P1_3</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="15965389">40.5521mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4914.262mil|Location2.X=5616.905mil|Location1.Y=3999.482mil|Location2.Y=4812.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4914.262mil|Location2.X=5616.905mil|Location1.Y=3999.482mil|Location2.Y=4812.905mil|Absolute=True">P1_4/CSN</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="15231330">38.6876mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5049.634mil|Location2.X=5601.35mil|Location1.Y=3999.482mil|Location2.Y=4901.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5049.634mil|Location2.X=5601.35mil|Location1.Y=3999.482mil|Location2.Y=4901.199mil|Absolute=True">P1_5/SCLK</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="12138628">30.8321mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5049.634mil|Location2.X=5716.905mil|Location1.Y=3899.482mil|Location2.Y=4801.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5049.634mil|Location2.X=5716.905mil|Location1.Y=3899.482mil|Location2.Y=4801.199mil|Absolute=True">P1_6/MOSI</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="11360692">28.8562mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5049.634mil|Location2.X=5701.35mil|Location1.Y=3799.482mil|Location2.Y=4901.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5049.634mil|Location2.X=5701.35mil|Location1.Y=3799.482mil|Location2.Y=4901.199mil|Absolute=True">P1_7/MISO</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="16387195">41.6235mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.917mil|Location2.X=5816.905mil|Location1.Y=4505.766mil|Location2.Y=6039.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4895.917mil|Location2.X=5816.905mil|Location1.Y=4505.766mil|Location2.Y=6039.905mil|Absolute=True">P2_0</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="24310400">61.7484mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5049.634mil|Location2.X=5801.35mil|Location1.Y=4099.482mil|Location2.Y=4901.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5049.634mil|Location2.X=5801.35mil|Location1.Y=4099.482mil|Location2.Y=4901.199mil|Absolute=True">P2_1/DD</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="11944408">30.3388mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4933.095mil|Location2.X=5907.905mil|Location1.Y=3509.546mil|Location2.Y=4801.199mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4933.095mil|Location2.X=5907.905mil|Location1.Y=3509.546mil|Location2.Y=4801.199mil|Absolute=True">P2_2/DC</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="22846875">58.0311mm
+			</a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4894.577mil|Location2.X=5811.35mil|Location1.Y=3595.765mil|Location2.Y=5079.982mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4894.577mil|Location2.X=5811.35mil|Location1.Y=3595.765mil|Location2.Y=5079.982mil|Absolute=True">RESET</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="47021456">119.4345mm
+			</a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=E:\1%E8%B5%B7%E8%B5%B0%E8%BF%91%E7%A7%91%E5%AD%A6\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5506.634mil|Location2.X=6246.905mil|Location1.Y=3695.23mil|Location2.Y=5499.685mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5506.634mil|Location2.X=6246.905mil|Location1.Y=3695.23mil|Location2.Y=5499.685mil|Absolute=True">USB_5V</acronym></a></td>
+<td class="column2">Signal Layers Only</td>
+<td class="column3"><a name="coordinate" value="33102510">84.0804mm
+			</a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

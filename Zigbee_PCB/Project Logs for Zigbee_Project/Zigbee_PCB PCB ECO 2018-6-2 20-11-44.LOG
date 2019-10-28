@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=P0_7/DHT21 Pin=P4-2
+Removed Pin From Net: NetName=P0_0/CO Pin=P5-2
+Removed Pin From Net: NetName=P0_6/MQ3_B0 Pin=P6-3
+Removed Pin From Net: NetName=P0_5/MQ3_A0 Pin=P6-4
+Removed Pin From Net: NetName=P0_4/HCL Pin=P7-2
+Removed Pin From Net: NetName=P0_7/DHT21 Pin=R14-2
+Change Component Comment : Designator=P5 Old Comment=DHT11&DS18B20 New Comment=CO
+Change Component Comment : Designator=P4 Old Comment=DHT11&DS18B20 New Comment=DHT21
+Change Component Comment : Designator=P7 Old Comment=DHT11&DS18B20 New Comment=HCL
+Change Component Designator: OldDesignator=S2 NewDesignator=TGS813_D
+Change Component Designator: OldDesignator=S3 NewDesignator=TGS813_A
+Added Component: Designator=CO(HDR1X2)
+Added Component: Designator=DHT21(HDR1X2)
+Added Component: Designator=HCL(HDR1X2)
+Added Component: Designator=MQ3_A(HDR1X2)
+Added Component: Designator=MQ3_D(HDR1X2)
+Added Pin To Net: NetName=P0_0/CO Pin=CO-2
+Added Pin To Net: NetName=P0_7/DHT21 Pin=DHT21-2
+Added Pin To Net: NetName=P0_4/HCL Pin=HCL-2
+Added Pin To Net: NetName=P0_5/MQ3_A0 Pin=MQ3_A-1
+Added Pin To Net: NetName=P0_6/MQ3_B0 Pin=MQ3_D-2
+Change Net Name : Old Net Name=NetS3_2 New Net Name=NetTGS813_A_2
+Added Pin To Net: NetName=NetCO_1 Pin=CO-1
+Added Pin To Net: NetName=NetCO_1 Pin=P5-2
+Added Net: Name=NetCO_1
+Added Pin To Net: NetName=NetDHT21_1 Pin=DHT21-1
+Added Pin To Net: NetName=NetDHT21_1 Pin=P4-2
+Added Pin To Net: NetName=NetDHT21_1 Pin=R14-2
+Added Net: Name=NetDHT21_1
+Added Pin To Net: NetName=NetHCL_1 Pin=HCL-1
+Added Pin To Net: NetName=NetHCL_1 Pin=P7-2
+Added Net: Name=NetHCL_1
+Added Pin To Net: NetName=NetMQ3_A_2 Pin=MQ3_A-2
+Added Pin To Net: NetName=NetMQ3_A_2 Pin=P6-4
+Added Net: Name=NetMQ3_A_2
+Added Pin To Net: NetName=NetMQ3_D_1 Pin=MQ3_D-1
+Added Pin To Net: NetName=NetMQ3_D_1 Pin=P6-3
+Added Net: Name=NetMQ3_D_1
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component CO Channel0
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component DHT21 Channel0
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component HCL Channel0
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component MQ3_A Channel0
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component MQ3_D Channel0

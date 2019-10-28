@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=P0_2/RX Pin=U1-1
+Added Pin To Net: NetName=P0_3/TX Pin=U1-5
+Added Room: Name=U_Sensor_Borad
+Added Room: Name=U_Zigbee_broad

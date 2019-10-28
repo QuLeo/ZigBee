@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=USB_5V Pin=D1-1
+Removed Pin From Net: NetName=USB_5V Pin=D2-2
+Removed Pin From Net: NetName=USB_5V Pin=DC1-1
+Added Pin To Net: NetName=Net_2 Pin=D1-1
+Added Pin To Net: NetName=Net_2 Pin=D2-2
+Added Pin To Net: NetName=Net_2 Pin=DC1-1
+Added Net: Name=Net_2
+Added Room: Name=U_Sensor_Borad
+Added Room: Name=U_Zigbee_broad

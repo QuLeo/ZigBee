@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=GND Pin=Battery-3
+Change Component Designator: OldDesignator=USB NewDesignator=USB_SLAVE
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetD1_2 Pin=Fuse1-1
+Added Net: Name=NetD1_2
+Added Room: Name=U_Sensor_Borad
+Added Room: Name=U_Zigbee_broad

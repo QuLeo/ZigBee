@@ -1,0 +1,17 @@
+Added Component: Designator=P8(HDR1X9)
+Added Pin To Net: NetName=+5V Pin=P8-1
+Added Pin To Net: NetName=+3.3V Pin=P8-2
+Added Pin To Net: NetName=P0_0/CO Pin=P8-3
+Added Pin To Net: NetName=P0_4/HCL Pin=P8-5
+Added Pin To Net: NetName=GND Pin=P8-9
+Added Pin To Net: NetName=P0_1/TGS814 Pin=P8-4
+Added Net: Name=P0_1/TGS814
+Added Pin To Net: NetName=P0_5/MQ3_A1 Pin=P8-6
+Added Net: Name=P0_5/MQ3_A1
+Added Pin To Net: NetName=P0_6/MQ3_B1 Pin=P8-7
+Added Net: Name=P0_6/MQ3_B1
+Added Pin To Net: NetName=P0_7/DHT22 Pin=P8-8
+Added Net: Name=P0_7/DHT22
+Added Member To Class: ClassName=U_Sensor_Borad Member=Component P8 Header 9
+Added Room: Name=U_Sensor_Borad
+Added Room: Name=U_Zigbee_broad

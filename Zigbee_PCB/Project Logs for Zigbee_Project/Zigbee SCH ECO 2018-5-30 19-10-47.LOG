@@ -1,0 +1,4 @@
+Remove Pin=NET-2 From Net=P1_0/NET
+Remove Pin=PA-2 From Net=P1_1/PA
+Remove Pin=TX-2 From Net=P0_3/TX
+Change Component Footprint: Designator=Sensor1 Old Footprint=TGS813-2 New Footprint=TGS813

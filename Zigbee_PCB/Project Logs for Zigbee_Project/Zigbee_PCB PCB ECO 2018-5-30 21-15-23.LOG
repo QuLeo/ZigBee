@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=1 NewDesignator=5.0V
+Change Component Designator: OldDesignator=2 NewDesignator=3.3V
+Change Component Designator: OldDesignator=3 NewDesignator=RP
+Change Net Name : Old Net Name=Net1_3 New Net Name=Net5.0V_3
+Change Net Name : Old Net Name=Net3_2 New Net Name=NetRP_2
+Added Room: Name=U_Sensor_Borad
+Added Room: Name=U_Zigbee_broad

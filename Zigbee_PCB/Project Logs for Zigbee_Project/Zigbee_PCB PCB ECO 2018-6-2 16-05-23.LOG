@@ -1,0 +1,6 @@
+Added Pin To Net: NetName=P0_5/MQ3_A0 Pin=P6-4
+Added Pin To Net: NetName=P0_5/MQ3_A0 Pin=P8-6
+Added Pin To Net: NetName=P0_6/MQ3_B0 Pin=P8-7
+Added Pin To Net: NetName=P0.1/TGS813 Pin=R_1-6
+Added Pin To Net: NetName=P0.1/TGS813 Pin=R_2-6
+Change Net Name : Old Net Name=P0.1/TGS813 New Net Name=P0_1/TGS813

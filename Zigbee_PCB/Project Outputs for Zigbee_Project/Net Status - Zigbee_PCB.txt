@@ -1,0 +1,61 @@
+Net Status Report
+Filename     : E:\1起走近科学\ZigBee\Zigbee PCB\Zigbee_Project\Zigbee_PCB.PcbDoc
+Date         : 2018/6/3
+Time         : 14:40:43
+Time Elapsed : 00:00:00
+
+Nets, Layer, Length
+    +3.3V, Signal Layers Only, 219.9173mm
+    +5V, Signal Layers Only, 270.55mm
+    DOUT, Signal Layers Only, 0mm
+    GND, Signal Layers Only, 518.1918mm
+    Net5.0V_3, Signal Layers Only, 104.4557mm
+    NetBattery_1, Signal Layers Only, 22.4418mm
+    NetC12_2, Signal Layers Only, 55.9152mm
+    NetC1_2, Signal Layers Only, 12.7283mm
+    NetC2_2, Signal Layers Only, 26.6097mm
+    NetCO_1, Signal Layers Only, 75.2306mm
+    NetD1_1, Signal Layers Only, 62.1839mm
+    NetD1_2, Signal Layers Only, 3.3862mm
+    NetD4_1, Signal Layers Only, 4.1331mm
+    NetDHT21_1, Signal Layers Only, 62.2668mm
+    NetFuse1_2, Signal Layers Only, 32.7927mm
+    NetHCL_1, Signal Layers Only, 84.5509mm
+    NetMQ3_A_2, Signal Layers Only, 22.6268mm
+    NetMQ3_D_1, Signal Layers Only, 53.1937mm
+    NetNET_1, Signal Layers Only, 10.9471mm
+    NetPA_1, Signal Layers Only, 7.1309mm
+    NetPWR_1, Signal Layers Only, 6.7381mm
+    NetR15_2, Signal Layers Only, 6.6287mm
+    NetR16_2, Signal Layers Only, 41.5879mm
+    NetR2_1, Signal Layers Only, 9.8678mm
+    NetR3_1, Signal Layers Only, 11.6022mm
+    NetR3_2, Signal Layers Only, 5.5126mm
+    NetR4_1, Signal Layers Only, 3.7277mm
+    NetR5_1, Signal Layers Only, 37.6523mm
+    NetR5_2, Signal Layers Only, 5.9317mm
+    NetR8_1, Signal Layers Only, 6.1103mm
+    NetRP1_2, Signal Layers Only, 13.0569mm
+    NetTGS813_A_2, Signal Layers Only, 4.7686mm
+    P0_0/CO, Signal Layers Only, 92.6948mm
+    P0_1/TGS813, Signal Layers Only, 124.9475mm
+    P0_2/RX, Signal Layers Only, 75.4573mm
+    P0_3/TX, Signal Layers Only, 105.4649mm
+    P0_4/HCL, Signal Layers Only, 94.3405mm
+    P0_5/MQ3_A0, Signal Layers Only, 82.109mm
+    P0_6/MQ3_B0, Signal Layers Only, 105.6628mm
+    P0_7/DHT21, Signal Layers Only, 86.2076mm
+    P1_0/NET, Signal Layers Only, 36.8181mm
+    P1_1/PA, Signal Layers Only, 41.1666mm
+    P1_2, Signal Layers Only, 38.4857mm
+    P1_3, Signal Layers Only, 40.5521mm
+    P1_4/CSN, Signal Layers Only, 38.6876mm
+    P1_5/SCLK, Signal Layers Only, 30.8321mm
+    P1_6/MOSI, Signal Layers Only, 28.8562mm
+    P1_7/MISO, Signal Layers Only, 41.6235mm
+    P2_0, Signal Layers Only, 61.7484mm
+    P2_1/DD, Signal Layers Only, 30.3388mm
+    P2_2/DC, Signal Layers Only, 58.0311mm
+    RESET, Signal Layers Only, 119.4345mm
+    USB_5V, Signal Layers Only, 84.0804mm
+count : 53

@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=Zigbee.SchDoc
+Record=SheetSymbol|SourceDocument=Zigbee.SchDoc|Designator=U_Sensor_Borad|SchDesignator=U_Sensor_Borad|FileName=Sensor_Borad.SchDoc|SymbolType=Normal|RawFileName=Sensor_Borad.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=Zigbee.SchDoc|Designator=U_Zigbee_broad|SchDesignator=U_Zigbee_broad|FileName=Zigbee_broad.SchDoc|SymbolType=Normal|RawFileName=Zigbee_broad.SchDoc|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

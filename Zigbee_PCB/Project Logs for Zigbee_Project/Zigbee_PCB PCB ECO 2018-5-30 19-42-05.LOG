@@ -1,0 +1,73 @@
+Removed Pin From Net: NetName=GND Pin=C1-1
+Removed Pin From Net: NetName=GND Pin=C2-1
+Removed Pin From Net: NetName=+3.3V Pin=C3-1
+Removed Pin From Net: NetName=GND Pin=C3-2
+Removed Pin From Net: NetName=GND Pin=C4-1
+Removed Pin From Net: NetName=Net1_3 Pin=C4-2
+Removed Pin From Net: NetName=+5V Pin=C6-2
+Removed Pin From Net: NetName=USB_5V Pin=C7-1
+Removed Pin From Net: NetName=GND Pin=C7-2
+Removed Pin From Net: NetName=+3.3V Pin=C9-2
+Removed Pin From Net: NetName=GND Pin=C10-1
+Removed Pin From Net: NetName=+3.3V Pin=C10-2
+Removed Pin From Net: NetName=GND Pin=C11-1
+Removed Pin From Net: NetName=RESET Pin=C11-2
+Change Component Footprint: Designator=C1 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=C2 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=C3 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=C4 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=C6 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=C7 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=C9 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=C10 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=C11 Old Footprint=0603 New Footprint=CAP5X5_4
+Change Component Footprint: Designator=Fuse1 Old Footprint=1812 New Footprint=RES0805
+Change Component Footprint: Designator=Battery Old Footprint=DC New Footprint=CR1220 - 1
+Change Component Footprint: Designator=D3 Old Footprint=LED0805 New Footprint=SMDLED
+Change Component Comment : Designator=R15 Old Comment=1K New Comment=Resistor
+Change Component Comment : Designator=R14 Old Comment=5R1 New Comment=Resistor
+Change Component Comment : Designator=R13 Old Comment=10K New Comment=Resistor
+Change Component Comment : Designator=Y1 Old Comment=12M New Comment=8MHz
+Change Component Comment : Designator=C1 Old Comment=20P New Comment=220uF
+Change Component Comment : Designator=C2 Old Comment=20P New Comment=220uF
+Change Component Comment : Designator=R3 Old Comment=27 New Comment=Resistor
+Change Component Comment : Designator=R5 Old Comment=27 New Comment=Resistor
+Change Component Comment : Designator=R2 Old Comment=103 New Comment=Resistor
+Change Component Comment : Designator=R4 Old Comment=103 New Comment=Resistor
+Change Component Comment : Designator=R7 Old Comment=103 New Comment=Resistor
+Change Component Comment : Designator=C3 Old Comment=104 New Comment=220uF
+Change Component Comment : Designator=C4 Old Comment=104 New Comment=220uF
+Change Component Comment : Designator=C6 Old Comment=104 New Comment=220uF
+Change Component Comment : Designator=C7 Old Comment=104 New Comment=220uF
+Change Component Comment : Designator=C9 Old Comment=104 New Comment=220uF
+Change Component Comment : Designator=C10 Old Comment=104 New Comment=220uF
+Change Component Comment : Designator=C11 Old Comment=104 New Comment=220uF
+Change Component Comment : Designator=R10 Old Comment=104 New Comment=Resistor
+Change Component Comment : Designator=R6 Old Comment=152 New Comment=Resistor
+Change Component Comment : Designator=R1 Old Comment=391 New Comment=Resistor
+Change Component Comment : Designator=R8 Old Comment=391 New Comment=Resistor
+Change Component Comment : Designator=R9 Old Comment=391 New Comment=Resistor
+Change Component Comment : Designator=R11 Old Comment=391 New Comment=Resistor
+Change Component Comment : Designator=R12 Old Comment=472 New Comment=Resistor
+Change Component Comment : Designator=Fuse1 Old Comment=1100mA New Comment=FUSH
+Change Component Comment : Designator=1 Old Comment=AMS1117-5.0 New Comment=AMS1117-3.3
+Change Component Comment : Designator=P5 Old Comment=CO New Comment=DHT11&DS18B20
+Change Component Comment : Designator=P3 Old Comment=DHT21 New Comment=DHT11&DS18B20
+Change Component Comment : Designator=P6 Old Comment=HCL New Comment=DHT11&DS18B20
+Change Component Comment : Designator=D2 Old Comment=IN4007 New Comment=DIODE SCHOTTKY
+Change Component Comment : Designator=D1 Old Comment=IN5819 New Comment=DIODE SCHOTTKY
+Change Component Comment : Designator=P2 Old Comment=IO New Comment=Header 3
+Change Component Comment : Designator=J2 Old Comment=JNU LOGO-2 New Comment=JNU logo
+Change Component Comment : Designator=D3 Old Comment=LED2 New Comment=LED1
+Change Component Comment : Designator=L_1 Old Comment=Left New Comment=Header 6X2
+Change Component Comment : Designator=L_2 Old Comment=Left New Comment=Header 6X2
+Change Component Comment : Designator=R_1 Old Comment=Right New Comment=Header 6X2
+Change Component Comment : Designator=R_2 Old Comment=Right New Comment=Header 6X2
+Change Component Description : Designator=1 Old Description=3.3V 5V: ‰»Î6.5V-12V New Description=
+Change Component Description : Designator=2 Old Description=3.3V 5V: ‰»Î6.5V-12V New Description=
+Added Pin To Net: NetName=NetU1_27 Pin=U1-27
+Added Pin To Net: NetName=NetU1_27 Pin=Y1-1
+Added Net: Name=NetU1_27
+Added Pin To Net: NetName=NetU1_28 Pin=U1-28
+Added Pin To Net: NetName=NetU1_28 Pin=Y1-2
+Added Net: Name=NetU1_28

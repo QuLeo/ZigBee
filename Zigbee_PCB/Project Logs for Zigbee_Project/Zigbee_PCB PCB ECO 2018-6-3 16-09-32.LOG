@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=P0_0/CO Pin=CO-1
+Removed Pin From Net: NetName=P0_4/HCL Pin=HCL-1
+Added Pin To Net: NetName=NetCO_s_1 Pin=CO-1
+Added Pin To Net: NetName=P0_0/CO Pin=CO-4
+Added Pin To Net: NetName=NetHCL_s_1 Pin=HCL-1
+Added Pin To Net: NetName=P0_4/HCL Pin=HCL-4
